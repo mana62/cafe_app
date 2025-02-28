@@ -15,10 +15,12 @@ class CreateCafesTable extends Migration
     {
         Schema::create('cafes', function (Blueprint $table) {
             $table->id();
-            $table->string('name',100)->default('');
-            $table->text('description')->default('');
-            $table->string('address',100)->default('');
-            $table->string('image')->nullable();
+            $table->foreignId('owner_id')->constrained('owners')->onDelete('cascade');
+            $table->string('name', 100)->default('');
+            $table->text('description')->nullable();
+            $table->string('address', 255)->default('');
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
             $table->timestamps();
         });
     }

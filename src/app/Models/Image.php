@@ -5,20 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Review extends Model
+class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'user_id',
-        'cafe_id',
-        'rating',
-        'comment',
-    ];
+    protected $table = 'cafe_images';
 
-    public function user() {
-        return $this->belongsTo(User::class);
-    }
+    protected $fillable = [
+        'cafe_id',
+        'image_path',
+    ];
 
     public function cafe() {
         return $this->belongsTo(Cafe::class);

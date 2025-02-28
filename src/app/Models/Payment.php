@@ -5,31 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reservation extends Model
+class Payment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id',
-        'cafe_id',
-        'reservation_time',
-        'guest_count',
+        'reservation_id',
+        'payment_intent_id',
+        'amount',
         'status',
+        'payment_method',
     ];
 
     protected $attributes = [
-        'status' => 'confirmed',
+        'status' => 'pending',
     ];
-
-    public function payments() {
-        return $this->hasMany(Payment::class);
-    }
 
     public function user() {
         return $this->belongsTo(User::class);
     }
 
-    public function cafe() {
-        return $this->belongsTo(Cafe::class);
+    public function reservation() {
+        return $this->belongsTo(Reservation::class);
     }
 }

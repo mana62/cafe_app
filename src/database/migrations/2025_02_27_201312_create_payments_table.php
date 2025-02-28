@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReviewsTable extends Migration
+class CreatePaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('cafe_id')->constrained('cafes')->onDelete('cascade');
-            $table->tinyInteger('rating')->unsigned()->default('0');
-            $table->text('comment')->nullable();
+            $table->foreignId('reservation_id')->constrained('reservations')->onDelete('cascade');
+            $table->string('payment_intent_id')->unique();
+            $table->integer('amount');
+            $table->enum('status', ['pending', 'succeeded', 'failed'])->default('pending');
+            $table->string('payment_method')->default('card');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('payments');
     }
 }
