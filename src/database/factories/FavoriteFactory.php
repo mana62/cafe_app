@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
-use App\Models\Cafe;
+use App\Models\Product;
 
 class FavoriteFactory extends Factory
 {
@@ -17,7 +17,7 @@ class FavoriteFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'cafe_id' => Cafe::factory(),
+            'product_id' => Product::factory(),
         ];
     }
 }

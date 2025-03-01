@@ -1,0 +1,275 @@
+body {
+    background: #cbc0d3;
+}
+
+/* div box styling */
+.container {
+    margin: auto;
+    width: 900px;
+    height: 600px;
+    position: relative;
+}
+
+.whitebox {
+    width: 900px;
+    height: 550px;
+    position: absolute;
+    top: 20%;
+    border-radius: 5px;
+}
+
+.pinkbox {
+    position: absolute;
+    top: -5%;
+    left: 0.3%;
+    background: #eac7cc;
+    width: 500px;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.signup-active .pinkbox {
+    transform: translateX(100%);
+}
+
+/* ログイン画面を表示する時（初期位置） */
+.login-active .pinkbox {
+    transform: translateX(0%);
+}
+
+.nodisplay {
+    display: none;
+}
+
+.leftbox,
+.rightbox {
+    position: absolute;
+    width: 50%;
+    transition: 1s all ease;
+    border-radius: 5px;
+}
+
+.leftbox {
+    left: -2%;
+    background-color: #fffdfb;
+}
+
+.rightbox {
+    right: -2%;
+    background-color: #f3efff;
+}
+
+.signup__ttl,
+.signin__ttl {
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    font-size: 3em;
+    letter-spacing: 8px;
+}
+
+.title {
+    font-family: "Playwrite IT Moderna", serif;
+    color: #8e9aaf;
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 15%;
+    margin-bottom: 0;
+}
+
+.text {
+    font-family: "Playwrite IT Moderna", serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 5px 0;
+    color: #8e9aaf;
+    text-align: center;
+}
+
+.title span,
+.text span {
+    color: #eac7cc;
+}
+
+.cake1 {
+    position: absolute;
+    max-width: 50%;
+    top: 38%;
+    left: 25%;
+    border-radius: 10px;
+}
+
+.cake2 {
+    position: absolute;
+    top: 36%;
+    left: 30%;
+    width: 41%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.account {
+  margin-top: 58%;
+  font-size: 16px;
+  font-family: "Raleway", serif;
+  color: #8e9aaf;
+    text-align: center;
+}
+
+button {
+    padding: 12px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    border-radius: 10px;
+    margin: auto;
+    outline: none;
+    display: block;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ed9aa6;
+    color: #7d8188;
+    transition: background-color 1s ease-out;
+}
+
+.button {
+  margin: 15px auto;
+  color: #7d8188;
+    border: solid 2px #eac7cc;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* form styling */
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7px;
+}
+
+.signup__form,
+.signin__form {
+    padding-top: 35px;
+}
+
+.signup__form input,
+.signin__form input {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Raleway", serif;
+}
+
+.signup__form .submit,
+.signin__form .submit {
+    margin-top: 60px;
+}
+
+.submit {
+    margin-top: 25px;
+    padding: 12px;
+    border-color: darken(#eac7cc, 20%);
+    border: 1px solid #7d8188;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #cbc0d3;
+    border-color: darken(#cbc0d3, 5%);
+}
+
+input {
+    background: #eac7cc;
+    width: 65%;
+    color: #f6f6f6;
+    border: none;
+    border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+    padding: 9px;
+    margin: 7px;
+}
+
+input::placeholder {
+  color: #f6f6f6;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+input:focus {
+  color: #f6f6f6;
+    outline: none;
+    border-bottom: 1.2px solid rgba(darken(#eac7cc, 20%), 0.7);
+    font-size: 1em;
+    transition: 0.8s all ease;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+.signin__label {
+  font-family: "Raleway", serif;
+    color: #f6f6f6;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.checkbox {
+    display: inline;
+    white-space: nowrap;
+    position: relative;
+    left: -70px;
+    top: 5px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  margin: 4px 10px;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+    color: darken(#eac7cc, 20%);
+    transition: 0.5s all ease;
+}
+
+.toggle_password {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    z-index: 1;
+}
+
+.register {
+    position: absolute;
+    right: 17%;
+    top: 53%;
+}
+
+.confirm_register {
+    position: absolute;
+    right: 17%;
+    top: 63%;
+}
+
+.login {
+    position: absolute;
+    right: 17%;
+    top: 44%;
+}
+
+.toggle_password img {
+    width: 30px;
+    height: 30px;
+}
