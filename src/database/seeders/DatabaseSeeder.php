@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Contact;
 use Illuminate\Database\Seeder;
 
 
@@ -17,13 +18,15 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             UserSeeder::class,
-            OwnerSeeder::class,
-            CafeSeeder::class,
-            ImageSeeder::class,
+            ProductSeeder::class,
+            ProductImageSeeder::class,
             FavoriteSeeder::class,
             ReviewSeeder::class,
-            ReservationSeeder::class,
+            OrderSeeder::class,
             PaymentSeeder::class,
+            ContactSeeder::class,
+            AddressSeeder::class,
+            CartSeeder::class,
         ]);
     }
 }

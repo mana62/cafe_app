@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
-use App\Models\Cafe;
+use App\Models\Product;
 
 class ReviewFactory extends Factory
 {
@@ -19,7 +19,7 @@ class ReviewFactory extends Factory
 
         return [
             'user_id' => User::factory(),
-            'cafe_id' => Cafe::factory(),
+            'product_id' => Product::factory(),
             'rating' => $this->faker->numberBetween(1, 5),
             'comment' => $this->faker->sentence(),
         ];

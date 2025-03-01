@@ -11,7 +11,7 @@ class Review extends Model
 
     protected $fillable = [
         'user_id',
-        'cafe_id',
+        'product_id',
         'rating',
         'comment',
     ];
@@ -20,7 +20,7 @@ class Review extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function cafe() {
-        return $this->belongsTo(Cafe::class);
+    public function product() {
+        return $this->belongsTo(Product::class);
     }
 }

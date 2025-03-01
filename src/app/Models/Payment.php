@@ -11,7 +11,7 @@ class Payment extends Model
 
     protected $fillable = [
         'user_id',
-        'reservation_id',
+        'order_id',
         'payment_intent_id',
         'amount',
         'status',
@@ -22,11 +22,15 @@ class Payment extends Model
         'status' => 'pending',
     ];
 
+    public function getAmountAttribute() {
+        return $this->order->items->sum(fn($item) => $item->product->price * $item->quantity);
+    }
+
     public function user() {
         return $this->belongsTo(User::class);
     }
 
-    public function reservation() {
-        return $this->belongsTo(Reservation::class);
+    public function order() {
+        return $this->belongsTo(Order::class);
     }
 }
