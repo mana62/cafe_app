@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/home', [ProductController::class, 'index'])->name('product');
+Route::get('/home', [ProductController::class, 'index'])->name('home');
+Route::get( '/product', [ProductController::class, 'show'])->name('product');
+Route::get( '/contact', [ContactController::class, 'index'])->name('contact');

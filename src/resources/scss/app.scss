@@ -1,0 +1,74 @@
+$back_color: #f9f2ff;
+$main_back_color: #fffdfb;
+$font_ttl: "Playwrite IT Moderna", serif;
+$font_text: "Raleway", serif;
+$font_color: #8e9aaf;
+$font_color_span: #eac7cc;
+
+a {
+    text-decoration: none;
+    color: $font_color;
+    cursor: pointer;
+}
+
+.header {
+    background-color: $back_color;
+    position: fixed;
+    width: 100%;
+}
+
+.header__inner {
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: $font_ttl;
+    font-size: 35px;
+    color: $font_color;
+    text-align: center;
+    font-weight: 300;
+}
+
+.header__logo span {
+    color: $font_color_span;
+}
+
+.nav__item {
+    list-style: none;
+    margin: 0 30px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: $font_text;
+    font-weight: 300;
+}
+
+.main {
+    background-color: $main_back_color;
+    padding: 50px 20px;
+    height: auto;
+}
+
+.footer {
+  background-color: $back_color;
+}
+
+.footer__inner {
+  padding: 10px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer__copy {
+  font-family: $font_text;
+  font-size: 18px;
+  color: $font_color;
+  font-weight: 300;
+  letter-spacing: 2px;
+}

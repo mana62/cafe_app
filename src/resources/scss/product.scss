@@ -1,0 +1,87 @@
+$back_color: #cbc5daf0;
+$main_back_color: #f9f2ff;
+$font_text: "Noto Sans JP", sans-serif;
+$ttl_color: #555151;
+$font_color: #8e9aaf;
+$font_color_strong: #efa7b1;
+$font_text_en: "Raleway", serif;
+$font_ttl: "Playwrite IT Moderna", serif;
+
+.main {
+    padding: 0;
+    background-color: $back_color;
+}
+
+.product-list {
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.product-list__title {
+    font-size: 38px;
+    font-family: $font_ttl;
+    color: $ttl_color;
+    margin: 30px 0;
+    margin: 90px 0 30px;
+    font-weight: 300;
+}
+
+.product-list__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border: 2px solid $font_color_strong;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card__name {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-family: $font_text_en;
+}
+
+.product-card__price {
+    font-size: 18px;
+    color: #e67e22;
+    font-weight: 300;
+    font-family: $font_text_en;
+}
+
+.product-card__description {
+    font-size: 14px;
+    color: #8e9aaf;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-family: $font_text;
+}
+
+.detail-link {
+    text-align: center;
+    font-family: $font_text;
+    background-color: #e86274;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-link:hover {
+    background-color: $font_color_strong;
+}
