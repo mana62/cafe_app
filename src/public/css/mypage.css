@@ -1,0 +1,325 @@
+/* 📌 マイページ全体 */
+.mypage-container {
+    max-width: 1000px;
+    margin: 80px auto 0;
+    padding: 20px;
+}
+
+.flex__ttl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.flex__ttl h1 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    color: #ffaeae;
+}
+
+.flex__ttl span {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    color: #555151;
+}
+
+.flex__img {
+    width: 55px;
+}
+
+.flex__img img {
+    width: 100%;
+}
+
+/* 📌 タブメニュー */
+.mypage-tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px 30px;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    font-weight: 300;
+    color: #b89e9e;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.tab-btn.active {
+    background: #e67e22;
+    color: white;
+    font-weight: 300;
+}
+
+/* 📌 タブのコンテンツ */
+.tab-content {
+    display: none;
+    border: 1px solid #555151;
+    margin-bottom: 80px;
+}
+
+/* 初期状態で「ユーザー情報」のタブを表示 */
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    color: #555151;
+}
+
+p {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #555151;
+}
+
+.user-info__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info__text p {
+    display: flex;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    color: #555151;
+    font-weight: 300;
+}
+
+.user-info__text p span {
+    display: inline-block;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #5d5d5d;
+    min-width: 160px;
+    text-align: left;
+}
+
+.order-info {
+    background-color: #f8dca9;
+    padding: 20px 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    color: #555151;
+}
+
+.change-info,
+.change-address {
+    padding: 5px 20px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #efa7b1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.change-info a,
+.change-address a {
+    color: #2b2525;
+}
+
+.change-info:hover,
+.change-address:hover {
+    background-color: #e77c8b;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text p {
+    display: flex;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    color: #555151;
+    font-weight: 300;
+}
+
+.info-text p span {
+    display: inline-block;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #5d5d5d;
+    min-width: 160px;
+    text-align: left;
+}
+
+.order-label,
+.review-label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 10px;
+    color: #8e9aaf;
+}
+
+
+.user-info {
+    background-color: #fbeded;
+    padding: 20px 40px;
+} /* 淡いピンク */
+.order-info {
+    background-color: #f8dca9;
+    padding: 20px 40px;
+} /* 淡いオレンジ */
+.favorite-info {
+    background-color: #d4eaf5;
+    padding: 20px 40px;
+} /* 淡いブルー */
+.review-info {
+    background-color: #e2f5d4;
+    padding: 20px 40px;
+} /* 淡いグリーン */
+.address-info {
+    background-color: #fafa96;
+    padding: 20px 40px;
+} /* 淡いベージュ */
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.favorite-ul {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item-list .favorite-li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.order-ul,
+.review-ul {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item-list .order-li,
+.item-list .review-li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-list img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.items a {
+    text-decoration: none;
+    color: #8e9aaf;
+    cursor: pointer;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+}
+
+/* 編集フォームのデザイン */
+.edit-form {
+    background-color: #fefefe;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.edit-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    color: #5d5d5d;
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-buttons button[type="submit"] {
+    background-color: #efa7b1;
+    color: #fff;
+    font-weight: 300;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.edit-buttons button[type="button"] {
+    background-color: #d0d0d0;
+    color: #5d5d5d;
+    font-weight: 300;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.edit-buttons button:hover {
+    opacity: 0.8;
+}
+
+.message {
+    margin: 0 auto 50px;
+}
+
+.message-session {
+    color: #302a2b;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+}

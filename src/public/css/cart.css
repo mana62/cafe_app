@@ -1,0 +1,139 @@
+.main {
+    background-color: #ffffff;
+}
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.message {
+    margin: 120px auto 20px;
+}
+
+.message-session {
+    text-align: center;
+    color: #555151;
+    font-weight: 300;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.cart__table {
+    margin: 20px auto;
+    max-width: 1100px;
+    width: 100%;
+    border: 1px solid #555151;
+    border-collapse: collapse;
+}
+
+.cart__table tr {
+    border-bottom: 1px solid #555151;
+}
+
+.cart__table th {
+    background-color: #efa7b1;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    font-weight: 300;
+    text-align: center;
+    padding: 30px;
+}
+
+.cart__table td {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    font-weight: 300;
+    text-align: center;
+    padding: 30px;
+}
+
+.td__img {
+    max-width: 90px;
+    width: 100%;
+}
+
+td input {
+    border: 2px solid #efa7b1;
+    border-radius: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    width: 80px;
+    padding: 10px;
+}
+
+.item__update {
+    padding: 10px 20px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: rgb(253, 175, 17);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    margin: 0 10px;
+}
+
+.item__update:hover:hover {
+    background-color: #ffcc67;
+}
+
+.item__delete {
+    padding: 10px 20px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #ef5050;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.item__delete:hover {
+    background-color: #c73737;
+}
+
+.content__button {
+    margin-top: 20px;
+}
+
+.content__button-submit {
+    padding: 15px 50px;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #efa7b1;
+    color: #555151;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.content__button-submit:hover {
+    background-color: #e77c8b;
+}
+
+.contact__button-purchase {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact__button-purchase a {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.contact__button-purchase a:hover {
+    background-color: #efa7b1;
+}

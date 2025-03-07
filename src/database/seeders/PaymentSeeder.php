@@ -3,8 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Payment;
-
+use Illuminate\Support\Facades\DB;
 class PaymentSeeder extends Seeder
 {
     /**
@@ -14,6 +13,9 @@ class PaymentSeeder extends Seeder
      */
     public function run()
     {
-        Payment::factory(10)->create();
+        DB::table('payments')->insert([
+            ['payment_method' => 'クレジットカード'],
+            ['payment_method' => 'コンビニ払い'],
+        ]);
     }
 }

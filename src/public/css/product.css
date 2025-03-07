@@ -5,17 +5,65 @@
 
 .product-list {
   margin: auto;
-  padding: 40px;
+  padding: 110px 40px 20px;
   text-align: center;
 }
 
+.product-list__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* 📌 タイトル（Menu） */
 .product-list__title {
-  font-size: 38px;
+  font-size: 48px;
   font-family: "Playwrite IT Moderna", serif;
   color: #555151;
-  margin: 30px 0;
-  margin: 90px 0 30px;
   font-weight: 300;
+  margin: 0;
+  flex: 1;
+}
+
+/* 📌 検索フォーム */
+.product-list-search {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e86274;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  right: 0;
+}
+
+.product-list-search input {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 250px;
+  font-weight: 300;
+  outline: none;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.product-list-search button {
+  border: none;
+  background-color: #e86274;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-list-search button:hover {
+  background-color: #efa7b1;
 }
 
 .product-list__grid {
@@ -76,5 +124,21 @@
 
 .detail-link:hover {
   background-color: #efa7b1;
+}
+
+@media screen and (max-width: 768px) {
+  .product-list__header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product-list-search {
+    position: static;
+    width: 100%;
+  }
+
+  .product-list-search input {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=product.css.map */

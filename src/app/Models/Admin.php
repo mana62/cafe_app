@@ -26,8 +26,4 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function owners() {
-        return $this->hasMany(Owner::class);
-    }
 }

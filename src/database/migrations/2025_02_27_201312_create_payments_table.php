@@ -15,12 +15,12 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('order_id')->constrained('orders')->onDelete('cascade');
-            $table->string('payment_intent_id')->unique();
-            $table->integer('amount');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('order_id')->nullable()->constrained()->onDelete('cascade');
+            $table->string('payment_intent_id')->unique()->nullable();
+            $table->integer('amount')->default(0);
             $table->enum('status', ['pending', 'succeeded', 'failed'])->default('pending');
-            $table->string('payment_method')->default('card');
+            $table->string('payment_method')->default('');
             $table->timestamps();
         });
     }

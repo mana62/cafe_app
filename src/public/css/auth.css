@@ -4,7 +4,7 @@ body {
 
 /* div box styling */
 .container {
-    margin: auto;
+    margin: 60px auto;
     width: 900px;
     height: 600px;
     position: relative;
@@ -20,11 +20,11 @@ body {
 
 .pinkbox {
     position: absolute;
-    top: -5%;
+    top: -13%;
     left: 0.3%;
     background: #eac7cc;
     width: 500px;
-    height: 600px;
+    height: 700px;
     border-radius: 5px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -118,10 +118,10 @@ body {
 }
 
 .account {
-  margin-top: 58%;
-  font-size: 16px;
-  font-family: "Raleway", serif;
-  color: #8e9aaf;
+    margin-top: 58%;
+    font-size: 16px;
+    font-family: "Raleway", serif;
+    color: #8e9aaf;
     text-align: center;
 }
 
@@ -145,8 +145,8 @@ button:hover {
 }
 
 .button {
-  margin: 15px auto;
-  color: #7d8188;
+    margin: 15px auto;
+    color: #7d8188;
     border: solid 2px #eac7cc;
     font-size: 13px;
     font-family: "Open Sans", sans-serif;
@@ -202,13 +202,13 @@ input {
 }
 
 input::placeholder {
-  color: #f6f6f6;
+    color: #f6f6f6;
     letter-spacing: 2px;
     font-size: 1.3em;
     font-weight: 100;
 }
 input:focus {
-  color: #f6f6f6;
+    color: #f6f6f6;
     outline: none;
     border-bottom: 1.2px solid rgba(darken(#eac7cc, 20%), 0.7);
     font-size: 1em;
@@ -220,7 +220,7 @@ input:focus::placeholder {
 }
 
 .signin__label {
-  font-family: "Raleway", serif;
+    font-family: "Raleway", serif;
     color: #f6f6f6;
     font-size: 1em;
     letter-spacing: 1px;
@@ -235,8 +235,8 @@ input:focus::placeholder {
 }
 
 input[type="checkbox"] {
-  width: 20px;
-  margin: 4px 10px;
+    width: 20px;
+    margin: 4px 10px;
 }
 
 .checkbox input[type="checkbox"]:checked + label {
@@ -254,22 +254,30 @@ input[type="checkbox"] {
 .register {
     position: absolute;
     right: 17%;
-    top: 53%;
+    top: 46%;
 }
 
 .confirm_register {
     position: absolute;
     right: 17%;
-    top: 63%;
+    top: 54%;
 }
 
 .login {
     position: absolute;
     right: 17%;
-    top: 44%;
+    top: 38%;
 }
 
 .toggle_password img {
     width: 30px;
     height: 30px;
+}
+
+.error__message {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #ff7b7b;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
 }

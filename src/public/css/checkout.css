@@ -1,0 +1,94 @@
+.main {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.content {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content h1,
+.content h2 {
+    font-size: 35px;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    font-weight: 300;
+    margin: 60px 0;
+}
+
+.content__table {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #555151;
+}
+
+.content__table tr {
+    border-bottom: 1px solid #555151;
+}
+
+.content__table th {
+    background-color: #efa7b1;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    font-weight: 300;
+    text-align: center;
+    padding: 30px;
+    width: 200px;
+    font-size: 18px;
+    border-right: 1px solid #555151;
+}
+
+.content__table .content__table-th {
+    background-color: #ffcbd1;
+}
+
+.content__table .total {
+    background-color: #c2c2c2;
+}
+
+.content__table .table__th-pay {
+    background-color: #f9ba8a;
+}
+
+.content__table td {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    font-weight: 400;
+    text-align: center;
+    padding: 30px;
+}
+
+.content__select {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555151;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.content__button {
+    margin: 80px 0 40px;
+}
+
+.content__button-submit {
+    padding: 15px 50px;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #efa7b1;
+    color: #555151;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.content__button-submit:hover {
+    background-color: #e77c8b;
+}
