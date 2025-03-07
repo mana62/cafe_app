@@ -9,7 +9,7 @@ use App\Models\Favorite;
 use App\Models\Review;
 use App\Models\Address;
 use App\Http\Requests\AddressRequest;
-use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\UpdateUserRequest;
 
 class MyPageController extends Controller
 {
@@ -31,7 +31,7 @@ class MyPageController extends Controller
 }
 
     // ユーザー情報の更新
-    public function updateUser(LoginRequest $request, $id)
+    public function updateUser(UpdateUserRequest $request, $id)
     {
         $user = Auth::user();
 
