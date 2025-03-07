@@ -8,6 +8,7 @@ a {
   background-color: #f9f2ff;
   position: fixed;
   width: 100%;
+  grid-row: 1;
 }
 
 .header__inner {
@@ -42,14 +43,36 @@ a {
   font-weight: 300;
 }
 
+.nav__link-logout {
+  font-size: 20px;
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  border: none;
+  background-color: #f9f2ff;
+  color: #8e9aaf;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav__link-logout:hover {
+  background-color: #f9f2ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .main {
   background-color: #fffdfb;
   padding: 50px 20px;
-  height: auto;
+  flex-grow: 2;
 }
 
 .footer {
   background-color: #f9f2ff;
+  grid-row: 3;
 }
 
 .footer__inner {

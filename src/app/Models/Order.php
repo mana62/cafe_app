@@ -11,13 +11,15 @@ class Order extends Model
 
     protected $fillable = [
         'user_id',
-        'product_id',
-        'quantity',
         'status',
     ];
 
     protected $attributes = [
-        'status' => 'confirmed',
+        'status' => 'pending',
+    ];
+
+    protected $casts = [
+        'quantity' => 'array',
     ];
 
     public function payments() {
@@ -28,7 +30,10 @@ class Order extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function product() {
-        return $this->belongsTo(Product::class);
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'order_product')
+                    ->withPivot('quantity')
+                    ->withTimestamps();
     }
-}
+}   

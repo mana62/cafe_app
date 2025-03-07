@@ -1,11 +1,14 @@
 @charset "UTF-8";
+.main {
+  background-color: #ebd6d6;
+}
+
 .content {
   padding: 50px;
   max-width: 1000px;
   margin: auto;
 }
 
-/* 共通セクションデザイン */
 .section {
   max-width: 760px;
   margin: 50px auto;

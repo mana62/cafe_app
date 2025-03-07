@@ -6,17 +6,33 @@
 
 @section('content')
     <div class="product-list">
-        <h1 class="product-list__title">Menu</h1>
+        <div class="product-list__header">
+            <h1 class="product-list__title">Menu</h1>
+            <form action="{{ route('product.search') }}" method="GET" class="product-list-search">
+                <input type="text" name="product" value="{{ request('product') }}" placeholder="商品名を入力">
+                <button type="submit">検索</button>
+            </form>
+        </div>
+
+        <!-- 🔴 エラーメッセージ -->
+        @if (session('error'))
+            <p class="error-message">{{ session('error') }}</p>
+        @endif
+
         <div class="product-list__grid">
-            @foreach ($products as $product)
-                <div class="product-card">
-                    <img class="product-card__image" src="{{ asset('img/' . $product->image_path) }}" alt="">
-                    <h2 class="product-card__name">{{ $product->name }}</h2>
-                    <p class="product-card__price">¥{{ number_format($product->price) }}</p>
-                    <p class="product-card__description">{{ $product->description }}</p>
-                    <a href="" class="detail-link">詳細はこちら</a>
-                </div>
-            @endforeach
+            @if ($products->isEmpty())
+                <p class="no-results">該当する商品がありません</p>
+            @else
+                @foreach ($products as $product)
+                    <div class="product-card">
+                        <img class="product-card__image" src="{{ asset('img/' . $product->image_path) }}" alt="">
+                        <h2 class="product-card__name">{{ $product->name }}</h2>
+                        <p class="product-card__price">¥{{ number_format($product->price) }}</p>
+                        <p class="product-card__description">{{ $product->description }}</p>
+                        <a href="{{ route('product.detail', ['id' => $product->id]) }}" class="detail-link">詳細はこちら</a>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
 @endsection

@@ -1,0 +1,39 @@
+.main {
+    background-color: #cec1c1;
+    padding: 0;
+}
+
+.content {
+    padding-top: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content__message {
+    font-size: 35px;
+    font-weight: 300;
+    margin: 180px 0 15px;
+    color: #555151;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.card-payment__message {
+    font-size: 20px;
+    color: #8e9aaf;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    margin: 80px 0;
+    line-height: 1.6;
+}
+
+.mypage__link a {
+    display: inline-block;
+    margin: 50px auto 200px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #2f2e2e;
+    text-align: center;
+}
+
+/*# sourceMappingURL=contact.thanks.css.map */

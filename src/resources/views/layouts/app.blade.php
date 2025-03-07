@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Café Lumière</title>
+    <link rel="icon" href="{{ asset('img/tart.png') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,7 +28,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a href="" class="header__logo"><span class="header__logo-span">Café</span>Lumière</a>
+            <a href="{{ route('product') }}" class="header__logo"><span class="header__logo-span">Café</span>Lumière</a>
 
         <nav class="nav">
             <ul class="nav__list">
@@ -38,11 +40,12 @@
                     <li class="nav__item"><a href="{{ route('register') }}" class="nav__link">Register</a></li>
                 @endguest
                 @auth
-                <li class="nav__item"><a href="" class="nav__link">Mypage</a></li>
+                <li class="nav__item"><a href="{{ route('cart') }}" class="nav__link">Cart</a></li>
+                <li class="nav__item"><a href="{{ route('mypage') }}" class="nav__link">Mypage</a></li>
                     <li class="nav__item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button type="submit" class="nav__link">Logout</button>
+                            <button type="submit" class="nav__link-logout">Logout</button>
                         </form>
                     </li>
                 @endauth

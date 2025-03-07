@@ -1,4 +1,4 @@
-$back_color: #fffdfb;
+$back_color: #ebd6d6;
 $main_back_color: #f9f2ff;
 $font_ttl: "Playwrite IT Moderna", serif;
 $font_text: "Raleway", serif;
@@ -6,13 +6,16 @@ $ttl_color: #555151;
 $font_color: #8e9aaf;
 $font_color_strong: #efa7b1;
 
+.main {
+    background-color: $back_color;
+}
+
 .content {
     padding: 50px;
     max-width: 1000px;
     margin: auto;
 }
 
-/* 共通セクションデザイン */
 .section {
     max-width: 760px;
     margin: 50px auto;
