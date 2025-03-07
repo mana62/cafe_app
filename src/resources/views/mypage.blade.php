@@ -21,6 +21,15 @@
             @endif
         </div>
 
+        <div class="message">
+            @if (session('error'))
+                <div class="message-session">
+                    {{ session('error') }}
+                </div>
+            @endif
+        </div>
+
+
         <div class="mypage-tabs">
             <button class="tab-btn active" onclick="showTab('profile')">ユーザー情報</button>
             <button class="tab-btn" onclick="showTab('orders')">購入履歴</button>
@@ -47,12 +56,25 @@
 
                     <div class="edit-form" id="user-info-edit" style="display: none;">
                         <form action="{{ route('user.update', ['id' => $user->id]) }}" method="POST">
+    @method('PUT')
                             @csrf
                             <label>名 前</label>
                             <input type="text" name="name" value="{{ $user->name }}">
 
+                            <div class="error">
+                                @error('name')
+                                    <p class="error__message">{{ $message }}</p>
+                                @enderror
+                            </div>
+
                             <label>メール</label>
                             <input type="email" name="email" value="{{ $user->email }}">
+
+                            <div class="error">
+                                @error('email')
+                                    <p class="error__message">{{ $message }}</p>
+                                @enderror
+                            </div>
 
                             <div class="edit-buttons">
                                 <button type="submit">保存</button>
@@ -75,7 +97,9 @@
                                         <div class="items">
                                             <p><span class="order-label">注文ID</span><span>{{ $order->id }}</span></p>
                                             <p><span class="order-label">商品</span><span>{{ $product->name }}</span></p>
-                                            <p><span class="order-label">注文日</span><span>{{ $order->created_at->format('Y年m月d日') }}</span></p>
+                                            <p><span
+                                                    class="order-label">注文日</span><span>{{ $order->created_at->format('Y年m月d日') }}</span>
+                                            </p>
                                         </div>
                                     </li>
                                 @endforeach
@@ -94,7 +118,8 @@
                         <ul class="item-list favorite-ul">
                             @foreach ($favorites as $favorite)
                                 <li class="favorite-li">
-                                    <img src="{{ asset('img/' . $favorite->product->image_path) }}" alt="{{ $favorite->product->name }}">
+                                    <img src="{{ asset('img/' . $favorite->product->image_path) }}"
+                                        alt="{{ $favorite->product->name }}">
                                     <div class="items">
                                         <p>{{ $favorite->product->name }}</p>
                                         <a href="{{ route('product.detail', $favorite->product->id) }}">詳細を見る</a>
@@ -118,7 +143,8 @@
                                 <li class="review-li">
                                     <img src="{{ asset('img/' . $review->product->image_path) }}" alt="">
                                     <div class="items">
-                                        <p><span class="review-label">商品</span> <span>{{ $review->product->name }}</span></p>
+                                        <p><span class="review-label">商品</span> <span>{{ $review->product->name }}</span>
+                                        </p>
                                         <p><span class="review-label">評価</span> <span>{{ $review->rating }}</span></p>
                                         <p><span class="review-label">コメント</span> <span>{{ $review->comment }}</span></p>
                                     </div>
@@ -148,12 +174,25 @@
 
                     <div class="edit-form" id="address-edit" style="display: none;">
                         <form action="{{ route('address.update', ['id' => $user->id]) }}" method="POST">
+                            @method('PUT')
                             @csrf
                             <label>郵便番号</label>
                             <input type="text" name="postal_code" value="{{ $address->postal_code ?? '' }}">
 
+                            <div class="error">
+                                @error('postal_code')
+                                    <p class="error__message">{{ $message }}</p>
+                                @enderror
+                            </div>
+
                             <label>住所</label>
                             <input type="text" name="address" value="{{ $address->address ?? '' }}">
+
+                            <div class="error">
+                                @error('address')
+                                    <p class="error__message">{{ $message }}</p>
+                                @enderror
+                            </div>
 
                             <label>建物名</label>
                             <input type="text" name="building" value="{{ $address->building ?? '' }}">

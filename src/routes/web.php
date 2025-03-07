@@ -31,8 +31,8 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 // マイページ（認証＆メール認証済みユーザー）
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/mypage', [MyPageController::class, 'index'])->name('mypage');
-    Route::post('/mypage/{id}/user/update', [MyPageController::class, 'updateUser'])->name('user.update');
-    Route::post('/mypage/{id}/address/update', [MyPageController::class, 'updateAddress'])->name('address.update');
+    Route::put('/mypage/{id}/user/update', [MyPageController::class, 'updateUser'])->name('user.update');
+    Route::put('/mypage/{id}/address/update', [MyPageController::class, 'updateAddress'])->name('address.update');
 });
 
 // メール認証関連

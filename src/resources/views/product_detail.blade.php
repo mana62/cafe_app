@@ -83,9 +83,19 @@
                                 </div>
                                 <input type="hidden" name="rating" id="rating-value">
                             </div>
+                            <div class="error">
+                                @error('rating')
+                                    <p class="error__message">{{ $message }}</p>
+                                @enderror
+                            </div>
                             <div class="flex">
                                 <textarea name="comment" rows="6" cols="60" placeholder="レビューを入力してください"></textarea>
                                 <button type="submit" class="contact__button-submit">レビューを投稿</button>
+                            </div>
+                            <div class="error">
+                                @error('comment')
+                                    <p class="error__message">{{ $message }}</p>
+                                @enderror
                             </div>
                         </form>
 

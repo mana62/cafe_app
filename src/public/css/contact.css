@@ -105,4 +105,12 @@
 .contact__button-submit:hover {
   background-color: #e77c8b;
 }
+
+.error-message {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #f03d3d;
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+}
 /*# sourceMappingURL=contact.css.map */

@@ -21,9 +21,9 @@
                 <input type="text" id="name" name="name" class="contact__form-input" placeholder="例：山田 太郎" value="{{ old('name') }}" >
             </div>
 
-            <div class="contact__error">
+            <div class="error">
                 @error('name')
-                    <p class="contact__error-message">{{ $message }}</p>
+                    <p class="error-message">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -32,9 +32,9 @@
                 <input type="email" id="email" name="email" class="contact__form-input" placeholder="例：example@email.com" value="{{ old('email') }}">
             </div>
 
-            <div class="contact__error">
+            <div class="error">
                 @error('email')
-                    <p class="contact__error-message">{{ $message }}</p>
+                    <p class="error-message">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -44,9 +44,9 @@
                 <textarea id="content" name="content" class="contact__form-textarea" placeholder="お問い合わせ内容を入力してください">{{ old('content') }}</textarea>
             </div>
 
-            <div class="contact__error">
+            <div class="error">
                 @error('content')
-                    <p class="contact__error-message">{{ $message }}</p>
+                    <p class="error-message">{{ $message }}</p>
                 @enderror
             </div>
 
