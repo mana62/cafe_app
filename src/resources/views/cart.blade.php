@@ -30,14 +30,19 @@
             </tr>
             @forelse ($carts as $cart)
                 <tr>
+                    {{-- Noを表示 --}}
                     <td>{{ $loop->iteration }}</td>
+                    {{-- 該当商品のimgを表示 --}}
                     <td><img src="{{ asset('img/' . $cart->product->image_path) }}" alt="" class="td__img"></td>
+                    {{-- 該当商品名を表示 --}}
                     <td>{{ $cart->product->name }}</td>
                     <td>
+                        {{-- 商品の個数を変更するform --}}
                         <form action="{{ route('cart.update', ['id' => $cart->id]) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <input type="hidden" name="cart_id" value="{{ $cart->id }}">
+                            {{-- 商品の個数を表示 --}}
                             <input type="number" name="quantity" value="{{ $cart->quantity }}" min="1" required>
                             <button type="submit" class="item__update">個数を変更</button>
                         </form>
@@ -47,6 +52,7 @@
                         @enderror
                     </td>
                     <td>
+                        {{-- 該当商品を削除するform --}}
                         <form action="{{ route('cart.delete', $cart->id) }}" method="POST">
                             @csrf
                             @method('DELETE')

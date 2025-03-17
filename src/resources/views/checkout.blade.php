@@ -10,9 +10,9 @@
 
         <form action="{{ route('order.store') }}" method="POST">
             @csrf
-
             <table class="content__table">
                 <tbody>
+                    {{-- 初期値を0に設定 --}}
                     @php $total = 0; @endphp
                     @foreach ($carts as $cart)
                         @php

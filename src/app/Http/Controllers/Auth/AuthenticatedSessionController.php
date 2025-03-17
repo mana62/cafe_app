@@ -26,7 +26,7 @@ class AuthenticatedSessionController extends Controller
 
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
-            return redirect('/mypage')->with('message', 'ログインしました');
+            return redirect('/mypage');
         }
 
         return back()->withErrors([

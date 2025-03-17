@@ -23,14 +23,14 @@
                     </div>
                 @endif
             </div>
-    
+
             <div class="item-detail__card">
-                <!-- 📌 左側（商品画像） -->
+                <!-- 左側（商品画像） -->
                 <figure class="item-detail__img">
                     <img src="{{ asset('img/' . $product->image_path) }}" alt="{{ $product->name }}">
                 </figure>
 
-                <!-- 📌 右側（商品情報 + レビュー） -->
+                <!-- 右側（商品情報 + レビュー） -->
                 <div class="item-detail__info">
                     <h1 class="item-detail-title">Item</h1>
 
@@ -57,7 +57,7 @@
 
                     <h2 class="item-detail-title">Cart</h2>
                     <div class="item-detail__cart">
-                        <!-- 📌 数量選択フォーム -->
+                        <!-- 数量選択フォーム -->
                         <form action="{{ route('cart.add', ['id' => $product->id]) }}" method="POST" class="cart-form">
                             @csrf
                             <input type="number" name="quantity" min="1" value="1" class="cart-quantity">
@@ -65,12 +65,12 @@
                         </form>
                     </div>
                     <div class="item-detail__cart-link">
-                            <a href="{{ route('cart') }}">カートを見る</a>
-                        </div>
+                        <a href="{{ route('cart') }}">カートを見る</a>
+                    </div>
 
                     <div class="item-detail__review">
                         <h2 class="item-detail-title">Review</h2>
-                        <!-- 📌 レビュー投稿フォーム -->
+                        <!-- レビュー投稿フォーム -->
                         <form action="{{ route('reviews.store', $product->id) }}" method="POST" class="review-form">
                             @csrf
                             <div class="review__content-rating">
@@ -99,7 +99,7 @@
                             </div>
                         </form>
 
-                        <!-- 📌 レビューリスト -->
+                        <!-- レビューリスト -->
                         @if ($product->reviews->count() > 0)
                             <ul>
                                 @foreach ($product->reviews as $review)

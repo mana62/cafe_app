@@ -4,7 +4,7 @@ body {
 
 /* div box styling */
 .container {
-    margin: 60px auto;
+    margin: 0 auto;
     width: 900px;
     height: 600px;
     position: relative;
@@ -35,7 +35,6 @@ body {
     transform: translateX(100%);
 }
 
-/* ログイン画面を表示する時（初期位置） */
 .login-active .pinkbox {
     transform: translateX(0%);
 }
@@ -280,4 +279,22 @@ input[type="checkbox"] {
     font-weight: 300;
     font-size: 14px;
     text-align: center;
+}
+
+.admin-link {
+    margin:  10px auto;
+}
+
+.admin-link a {
+    display: block;
+    text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    color: #454a53;
+}
+
+.admin-link a:hover {
+    color: #8e9aaf;
 }

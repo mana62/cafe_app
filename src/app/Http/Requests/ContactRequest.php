@@ -37,7 +37,7 @@ class ContactRequest extends FormRequest
             'name.max' => 'お名前は100文字以内で入力してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスを正しく入力してください',
-            'email.max' =>  'メールアドレスは50文字以内で入力してください',
+            'email.max' => 'メールアドレスは50文字以内で入力してください',
             'content.required' => 'お問い合わせ内容を入力してください',
             'content.max' => 'お問い合わせ内容は255文字以内で入力してください',
         ];

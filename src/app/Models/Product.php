@@ -16,7 +16,8 @@ class Product extends Model
         'image_path',
     ];
 
-    public function favorites(){
+    public function favorites()
+    {
         return $this->hasMany(Favorite::class);
     }
 
@@ -25,22 +26,25 @@ class Product extends Model
         return $this->hasMany(Favorite::class, 'product_id');
     }
 
-    public function productImages(){
+    public function productImages()
+    {
         return $this->hasMany(ProductImage::class);
     }
 
     public function orders()
     {
         return $this->belongsToMany(Order::class, 'order_product')
-        ->withPivot('quantity')
-        ->withTimestamps();
-}
+            ->withPivot('quantity')
+            ->withTimestamps();
+    }
 
-    public function reviews() {
+    public function reviews()
+    {
         return $this->hasMany(Review::class);
     }
 
-    public function carts() {
+    public function carts()
+    {
         return $this->hasMany(Cart::class);
     }
 }

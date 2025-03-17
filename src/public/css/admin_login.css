@@ -1,0 +1,66 @@
+body {
+    background-color: #cbc0d3;
+}
+
+.container {
+    margin: 70px auto;
+    text-align: center;
+}
+
+.container h2 {
+    letter-spacing: 1px;
+    margin: 10px auto;
+    font-size: 40px;
+    font-weight: 300;
+    color: #555151;
+    font-family: "Playwrite IT Moderna", serif;
+}
+
+form {
+    font-family: "Playwrite IT Moderna", serif;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #3e3737;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 600px;
+    background-color: #dfb6b6;
+}
+
+label {
+    letter-spacing: 1px;
+    font-size: 22px;
+    color: #8d8d8d;
+    margin: 10px 30px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    border-radius: 10px;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    margin: 20px auto;
+    color: #555151;
+    border: 1px solid #555151;
+}
+
+button:hover {
+    background: #d97888;
+    cursor: pointer;
+}

@@ -22,15 +22,18 @@ class Payment extends Model
         'status' => 'pending',
     ];
 
-    public function getAmountAttribute() {
+    public function getAmountAttribute()
+    {
         return $this->order->items->sum(fn($item) => $item->product->price * $item->quantity);
     }
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function order() {
+    public function order()
+    {
         return $this->belongsTo(Order::class);
     }
 }
