@@ -1,17 +1,14 @@
-/* 📌 全体のスタイル */
 .main {
     background-color: rgba(203, 197, 218, 0.9411764706);
     text-align: center;
 }
 
-/* 📌 商品詳細のコンテナ */
 .item-detail {
     padding: 50px;
     max-width: 1000px;
     margin: auto;
 }
 
-/* 📌 カードデザイン */
 .box {
     border: 2px solid #555151;
     border-radius: 10px;
@@ -22,7 +19,6 @@
     text-align: center;
 }
 
-/* 📌 商品情報を左右に分ける */
 .item-detail__card {
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +27,6 @@
     gap: 20px;
 }
 
-/* 📌 タイトルデザイン（統一） */
 .item-detail-title {
     font-size: 40px;
     font-weight: 300;
@@ -53,7 +48,6 @@
     margin: 0 15px;
 }
 
-/* 📌 商品画像 */
 .item-detail__img {
     width: 350px;
     height: auto;
@@ -67,7 +61,6 @@
     border-radius: 10px;
 }
 
-/* 📌 商品名 */
 .item-detail__header h2 {
     font-size: 32px;
     font-weight: 400;
@@ -75,7 +68,6 @@
     font-family: "Raleway", serif;
 }
 
-/* 📌 お気に入り */
 .liked-text {
     font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
@@ -98,7 +90,6 @@
     color: #e388b6;
 }
 
-/* 📌 価格 */
 .item-detail__price p {
     font-size: 22px;
     color: #ffba6b;
@@ -106,7 +97,6 @@
     font-family: "Raleway", serif;
 }
 
-/* 📌 商品説明 */
 .item-detail__description,
 .no-review,
 .payment_method {
@@ -115,7 +105,6 @@
     font-family: "Noto Sans JP", sans-serif;
 }
 
-/* 📌 カートセクション（数量選択＋ボタン） */
 .item-detail__cart {
     display: flex;
     justify-content: center;
@@ -124,7 +113,6 @@
     margin: 20px 0;
 }
 
-/* 📌 個数選択のデザイン */
 .cart-quantity {
     width: 60px;
     padding: 8px;
@@ -140,7 +128,6 @@
     font-family: "Noto Sans JP", sans-serif;
 }
 
-/* 📌 購入ボタン */
 .contact__button-purchase,
 .contact__button {
     text-align: center;
@@ -161,7 +148,6 @@
     background-color: #efa7b1;
 }
 
-/* 📌 配送方法 */
 .item-detail__shipping {
     margin-top: 20px;
 }
@@ -173,20 +159,19 @@
     padding: 8px;
 }
 
-/* 📌 レビューセクション */
 .item-detail__review {
     text-align: center;
 }
 
 .review-item {
-    background-color: #fff6fa; /* 🌸 ほんのりピンクでやわらかい印象に */
+    background-color: #fff6fa;
     color: #555151;
     padding: 20px 40px;
     border-radius: 10px;
     font-family: "Noto Sans JP", sans-serif;
     list-style: none;
     margin: 60px 0;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 🟢 軽い影をつけて浮かせる */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .review-item div {
@@ -205,8 +190,8 @@
 div .review-user {
     font-weight: 400;
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 16px; /* 🟢 名前を少し大きくして強調 */
-    color: #d6336c; /* 🌸 ちょっと可愛いピンクに */
+    font-size: 16px;
+    color: #d6336c;
 }
 
 div .review-user span {
@@ -217,17 +202,16 @@ div .review-user span {
 }
 
 .review-stars span {
-    color: #ffcc00; /* 🟡 明るい黄色に */
-    font-size: 18px; /* ⭐ 大きめにして見やすく */
+    color: #ffcc00;
+    font-size: 18px;
 }
 
 .review-comment {
     font-size: 14px;
     line-height: 1.6;
-    margin-top: 10px; /* 🟢 星とコメントの間隔を統一 */
+    margin-top: 10px;
 }
 
-/* 📌 レビューの星のデザイン */
 .review__stars {
     display: flex;
     justify-content: center;
@@ -289,10 +273,6 @@ textarea {
     font-weight: 300;
     font-size: 20px;
     font-family: "Noto Sans JP", sans-serif;
-}
-
-.error {
-
 }
 
 .error__message {

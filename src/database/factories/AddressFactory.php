@@ -17,7 +17,7 @@ class AddressFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'postal_code' =>$this->faker->postcode(),
+            'postal_code' => $this->faker->postcode(),
             'address' => $this->faker->address(),
             'building' => $this->faker->secondaryAddress(),
             'phone_number' => $this->faker->phoneNumber(),

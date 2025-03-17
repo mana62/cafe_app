@@ -6,9 +6,6 @@
 
 @section('content')
     <div class="contact">
-      {{-- <div class="contact-img">
-        <img src="{{ asset('img/ribbon2.jpeg') }}" alt="">
-      </div> --}}
         <h1 class="contact__title">お問い合わせ</h1>
         <p class="contact__description">
             お問い合わせはこちらからどうぞ<br>
@@ -18,7 +15,8 @@
             @csrf
             <div class="contact__item">
                 <label for="name" class="contact__form-label">お名前 <span class="contact__form-required">必須</span></label>
-                <input type="text" id="name" name="name" class="contact__form-input" placeholder="例：山田 太郎" value="{{ old('name') }}" >
+                <input type="text" id="name" name="name" class="contact__form-input" placeholder="例：山田 太郎"
+                    value="{{ old('name') }}">
             </div>
 
             <div class="error">
@@ -28,8 +26,10 @@
             </div>
 
             <div class="contact__item">
-                <label for="email" class="contact__form-label">メールアドレス <span class="contact__form-required">必須</span></label>
-                <input type="email" id="email" name="email" class="contact__form-input" placeholder="例：example@email.com" value="{{ old('email') }}">
+                <label for="email" class="contact__form-label">メールアドレス <span
+                        class="contact__form-required">必須</span></label>
+                <input type="email" id="email" name="email" class="contact__form-input"
+                    placeholder="例：example@email.com" value="{{ old('email') }}">
             </div>
 
             <div class="error">
@@ -40,7 +40,8 @@
 
 
             <div class="contact__item">
-                <label for="content" class="contact__form-label">お問い合わせ内容 <span class="contact__form-required">必須</span></label>
+                <label for="content" class="contact__form-label">お問い合わせ内容 <span
+                        class="contact__form-required">必須</span></label>
                 <textarea id="content" name="content" class="contact__form-textarea" placeholder="お問い合わせ内容を入力してください">{{ old('content') }}</textarea>
             </div>
 

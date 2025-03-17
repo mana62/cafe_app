@@ -92,9 +92,13 @@
 
                         <button type="submit" class="button submit">LOGIN</button>
                     </form>
+                    <div class="admin-link">
+                        <a href="{{ route('admin.login') }}">管理者の方はこちら</a>
+                    </div>
                 </div>
-
             </div>
+
+            {{-- 背景部分 --}}
             <div class="leftbox">
                 <h2 class="title"><span>Café</span>Lumière</h2>
                 <p class="text">Savourons <span>chaque instant</span></p>

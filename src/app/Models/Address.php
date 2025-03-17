@@ -17,7 +17,8 @@ class Address extends Model
         'phone_number',
     ];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

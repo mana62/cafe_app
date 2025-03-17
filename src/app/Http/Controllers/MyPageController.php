@@ -19,22 +19,23 @@ class MyPageController extends Controller
 
         // ユーザーが取得できなかった場合、エラーページにリダイレクト
         if (!$user) {
-            return redirect()->route('login')->with('error', 'ログインしてください');
+            return redirect()->route('login');
         }
 
-        $orders = Order::where('user_id', $user->id)->with('products')->get(); 
-    $favorites = Favorite::where('user_id', $user->id)->with('product')->get();
-    $reviews = Review::where('user_id', $user->id)->with('product')->get();
-    $address = Address::where('user_id', $user->id)->first();
+        $orders = Order::where('user_id', $user->id)->with('products')->get();
+        $favorites = Favorite::where('user_id', $user->id)->with('product')->get();
+        $reviews = Review::where('user_id', $user->id)->with('product')->get();
+        $address = Address::where('user_id', $user->id)->first();
 
-    return view('mypage', compact('user', 'orders', 'favorites', 'reviews', 'address'));
-}
+        return view('mypage', compact('user', 'orders', 'favorites', 'reviews', 'address'));
+    }
 
     // ユーザー情報の更新
     public function updateUser(UpdateUserRequest $request, $id)
     {
         $user = Auth::user();
 
+        // ログインしていない、またはユーザーIDがない場合、エラーメッセージ表示
         if (!$user || $user->id != $id) {
             return redirect()->route('mypage')->with('error', '権限がありません');
         }
@@ -48,11 +49,12 @@ class MyPageController extends Controller
         return redirect()->route('mypage')->with('success', 'ユーザー情報を更新しました');
     }
 
-    // 🟢 配送先情報の更新
+    // 配送先情報の更新
     public function updateAddress(AddressRequest $request, $id)
     {
         $user = Auth::user();
 
+        // ログインしていない、またはユーザーIDがない場合、エラーメッセージ表示
         if (!$user || $user->id != $id) {
             return redirect()->route('mypage')->with('error', '権限がありません');
         }
@@ -61,14 +63,14 @@ class MyPageController extends Controller
         $address = Address::where('user_id', $user->id)->first();
 
         if ($address) {
-            // 既存のデータを更新
+            // 既存のデータがある場合は更新
             $address->update([
                 'postal_code' => $request->postal_code,
                 'address' => $request->address,
                 'building' => $request->building,
             ]);
         } else {
-            // 新規作成
+            // なければ新規作成して保存
             Address::create([
                 'user_id' => $user->id,
                 'postal_code' => $request->postal_code,

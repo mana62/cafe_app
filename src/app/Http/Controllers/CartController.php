@@ -5,39 +5,40 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
-use Illuminate\Support\Facades\Session;
-use Illuminate\View\Component;
 
 class CartController extends Controller
 {
+    //カートの一覧を表示
     public function index()
     {
+        // auth()->id() で、現在ログインしているユーザーのIDを取得
+        // ログインユーザーのカートデータを取得
         $carts = Cart::where('user_id', auth()->id())->get();
+        // 取得したカートデータを cart というビュー（画面）に渡す
         return view('cart', compact('carts'));
     }
+
     public function add(Request $request, $id)
     {
-        $product = Product::find($id);
+        // 追加する商品のidをProductデータベースから探す
+        Product::find($id);
 
-        if (!$product) {
-            return redirect()->route('product')->with('error', '商品が見つかりませんでした');
-        }
-
-        // 🟢 ユーザーがログインしているか確認
+        // auth()->check() で、ログインしているか確認しログインしていなければログイン画面へ
         if (!auth()->check()) {
-            return redirect()->route('login')->with('error', 'カートに追加するにはログインしてください');
+            return redirect()->route('login');
         }
 
+        // ログインユーザーのIDを取得
         $userId = auth()->id();
 
-        // 🟢 すでにカートにあるかチェック
+        // 既にカートに商品があるかチェック
         $cartItem = Cart::where('user_id', $userId)->where('product_id', $id)->first();
         if ($cartItem) {
-            // 🟢 既にカートにある場合は数量を増やす
+            // 既にカートにある場合は個数を増やして保存
             $cartItem->quantity += $request->quantity;
             $cartItem->save();
         } else {
-            // 🟢 カートに新しく追加
+            // ない場合、新しいカートデータを作成して保存
             Cart::create([
                 'user_id' => $userId,
                 'product_id' => $id,
@@ -49,15 +50,13 @@ class CartController extends Controller
 
     public function checkout()
     {
+        // ログインしていなければログイン画面へリダイレクト
         if (!auth()->check()) {
-            return redirect()->route('login')->with('error', '購入するにはログインしてください');
+            return redirect()->route('login');
         }
 
+        // ログインユーザーのカートデータを取得
         $carts = Cart::where('user_id', auth()->id())->with('product')->get();
-
-        if ($carts->isEmpty()) {
-            return redirect()->route('cart')->with('error', 'カートが空です');
-        }
 
         return view('checkout', compact('carts'));
     }
@@ -69,17 +68,20 @@ class CartController extends Controller
         ]);
 
         try {
-        $cart = Cart::findOrFail($id);
-        $cart->quantity = $request->quantity;
-        $cart->save();
-        return redirect()->route('cart')->with('success', '個数を変更しました');
-    } catch (\Exception $e) {
-        return redirect()->route('cart')->with('error', '個数の変更に失敗しました');
+            // Cartデータベースから$idを取得
+            $cart = Cart::findOrFail($id);
+            // 数量を変更して$cart->quantityに代入
+            $cart->quantity = $request->quantity;
+            $cart->save();
+            return redirect()->route('cart')->with('success', '個数を変更しました');
+        } catch (\Exception $e) {
+            return redirect()->route('cart')->with('error', '個数の変更に失敗しました');
+        }
     }
-}
 
     public function destroy($id)
     {
+        // Cartデータベースから$idを取得して削除
         Cart::findOrFail($id)->delete();
         return redirect()->route('cart')->with('success', '削除しました');
     }

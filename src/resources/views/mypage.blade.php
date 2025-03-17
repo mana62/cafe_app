@@ -56,7 +56,7 @@
 
                     <div class="edit-form" id="user-info-edit" style="display: none;">
                         <form action="{{ route('user.update', ['id' => $user->id]) }}" method="POST">
-    @method('PUT')
+                            @method('PUT')
                             @csrf
                             <label>名 前</label>
                             <input type="text" name="name" value="{{ $user->name }}">

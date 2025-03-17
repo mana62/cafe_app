@@ -11,7 +11,7 @@ services:
       - php
     networks:
       - cafe_network
-    restart: always
+    # restart: always
 
   php:
     build: ./docker/php
@@ -23,7 +23,7 @@ services:
       - mysql
     networks:
       - cafe_network
-    restart: always
+    # restart: always
 
   mysql:
     image: mysql:8.0
@@ -40,7 +40,7 @@ services:
       - "3306:3306"
     networks:
       - cafe_network
-    restart: always
+    # restart: always
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -56,7 +56,7 @@ services:
       - PMA_PASSWORD=pass
     networks:
       - cafe_network
-    restart: always
+    # restart: always
 
   mailhog:
     image: mailhog/mailhog
@@ -66,7 +66,7 @@ services:
       - "8025:8025"
     networks:
       - cafe_network
-    restart: always
+    # restart: always
 
 volumes:
   mysql_data:

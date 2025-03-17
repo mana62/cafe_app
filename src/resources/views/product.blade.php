@@ -14,7 +14,7 @@
             </form>
         </div>
 
-        <!-- 🔴 エラーメッセージ -->
+        <!-- エラーメッセージ -->
         @if (session('error'))
             <p class="error-message">{{ session('error') }}</p>
         @endif
@@ -33,6 +33,9 @@
                     </div>
                 @endforeach
             @endif
+        </div>
+        <div class="pagination">
+            {{ $products->links('vendor.pagination.tailwind') }}
         </div>
     </div>
 @endsection

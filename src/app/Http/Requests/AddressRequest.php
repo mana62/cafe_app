@@ -27,7 +27,8 @@ class AddressRequest extends FormRequest
             'postal_code' => ['required', 'string', 'regex:/^\d{3}-\d{4}$/'],
             'address' => ['required', 'string', 'max:255'],
             'building' => ['nullable', 'string', 'max:255'],
-            'phone_number' => ['nullable', 'string', 'regex:/^0\d{1,4}-\d{1,4}-\d{4}$/'],        ];
+            'phone_number' => ['nullable', 'string', 'regex:/^0\d{1,4}-\d{1,4}-\d{4}$/'],
+        ];
     }
 
     public function messages()
