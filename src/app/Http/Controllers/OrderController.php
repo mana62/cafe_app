@@ -47,7 +47,7 @@ class OrderController extends Controller
             // 注文データを作成
             $order = Order::create([
                 'user_id' => $user->id,
-                'status' => 'pending',
+                'status' => 'confirmed',
             ]);
 
             // 注文IDを保存

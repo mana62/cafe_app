@@ -122,6 +122,8 @@ class CheckoutController extends Controller
             return response()->json(['succeeded' => true, 'redirect_url' => route('thanks.buy')]);
         } catch (\Exception $e) {
 
+            Payment::create(['status' => 'failed']);
+
             // エラーが発生した場合は処理を取り消す（rollback）
             DB::rollback();
             return response()->json([

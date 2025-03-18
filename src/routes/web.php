@@ -52,20 +52,16 @@ Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AdminController::class, 'login']);
     Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
-
-    Route::middleware('auth:admin')->group(function () {
-        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    });
 });
 
-// 管理者のダッシュボード
-Route::get('/admin/users', [DashboardController::class, 'showUsers'])->middleware('auth:admin')->name('admin.users');
-Route::delete('/admin/users/{id}/delete', [DashboardController::class, 'deleteUser'])->name('admin.users.delete');
-Route::get('/admin/products', [DashboardController::class, 'showProducts'])->middleware('auth:admin')->name('admin.products');
-Route::put('/admin/products/{id}/update', [DashboardController::class, 'updateProduct'])->name('admin.products.update');
-Route::delete('/admin/products/{id}/delete', [DashboardController::class, 'deleteProduct'])->name('admin.products.delete');
-Route::post('/admin/products', [DashboardController::class, 'storeProduct'])->name('admin.products.store');
-Route::get('/admin/orders', [DashboardController::class, 'showOrders'])->middleware('auth:admin')->name('admin.orders');
+// 管理者ダッシュボード
+Route::middleware('auth:admin')->group(function () {
+    Route::get('/admin/dashboard', [DashboardController::class, 'showDashboard'])->name('admin.dashboard');
+    Route::delete('/admin/users/{id}/delete', [DashboardController::class, 'deleteUser'])->name('admin.users.delete');
+    Route::put('/admin/products/{id}', [DashboardController::class, 'updateProduct'])->name('admin.products.update');
+    Route::delete('/admin/products/{id}/delete', [DashboardController::class, 'deleteProduct'])->name('admin.products.delete');
+    Route::post('/admin/products', [DashboardController::class, 'storeProduct'])->name('admin.products.store');
+});
 
 // 商品関連
 Route::get('/home', [ProductController::class, 'index'])->name('home');

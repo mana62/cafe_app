@@ -38,3 +38,37 @@
   height: auto;
 }
 /*# sourceMappingURL=contact.thanks.css.map */
+
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+  .content__title {
+    font-size: 28px;
+    margin: 120px 0 10px;
+  }
+
+  .content__description {
+    font-size: 18px;
+    margin: 60px 0;
+  }
+
+  .content__img {
+    width: 250px;
+  }
+}
+
+/* スマートフォン対応 (幅480px以下) */
+@media screen and (max-width: 480px) {
+  .content__title {
+    font-size: 24px;
+    margin: 80px 0 10px;
+  }
+
+  .content__description {
+    font-size: 16px;
+    margin: 40px 0;
+  }
+
+  .content__img {
+    width: 200px;
+  }
+}

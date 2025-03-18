@@ -1,208 +1,349 @@
-/* 全体のスタイル */
 body {
-  background-color: #ffffff;
-  font-family: "Noto Sans JP", sans-serif;
-  color: #555151;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+    background-color: #ffffff;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #555151;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
-  color: #8e9aaf;
-  cursor: pointer;
+    text-decoration: none;
+    color: #8e9aaf;
+    cursor: pointer;
 }
 
 .header {
-  background-color: #f9f2ff;
-  position: fixed;
-  width: 100%;
-  grid-row: 1;
+    background-color: #f9f2ff;
+    position: fixed;
+    width: 100%;
+    grid-row: 1;
 }
 
 .header__inner {
-  padding: 10px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
-  font-family: "Playwrite IT Moderna", serif;
-  font-size: 35px;
-  color: #8e9aaf;
-  text-align: center;
-  font-weight: 300;
+    font-family: "Playwrite IT Moderna", serif;
+    font-size: 35px;
+    color: #8e9aaf;
+    text-align: center;
+    font-weight: 300;
 }
 
 .header__logo span {
-  color: #eac7cc;
+    color: #eac7cc;
 }
 
 .admin-section {
-  display: none;
+    display: none;
 }
 
 .admin-section:first-of-type {
-  display: block; /* 最初のセクションを表示 */
+    display: block;
 }
 
 .nav__list {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .nav__item {
-  list-style: none;
+    list-style: none;
 }
 
 .nav__link {
-  cursor: pointer;
-  padding: 10px 15px;
-  background-color: #efa7b1;
-  font-family: "Noto Sans JP", sans-serif;
-  color: white;
-  border-radius: 5px;
-  font-weight: 200;
-  transition: 0.3s;
-  font-size: 14px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #efa7b1;
+    font-family: "Noto Sans JP", sans-serif;
+    color: white;
+    border-radius: 5px;
+    font-weight: 200;
+    transition: 0.3s;
+    font-size: 14px;
 }
 
-.nav__link:hover {
-  background-color: #e67e22;
+.nav__link-button {
+    cursor: pointer;
+    padding: 6px 15px;
+    background-color: #efa7b1;
+    font-family: "Noto Sans JP", sans-serif;
+    color: white;
+    border-radius: 5px;
+    font-weight: 200;
+    transition: 0.3s;
+    font-size: 14px;
 }
 
-/* コンテンツ全体のスタイル */
+.nav__link:hover,
+.nav__link-button:hover {
+    background-color: #e67e22;
+}
+
 .content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-/* 見出しスタイル */
 h1 {
-  font-size: 35px;
-  font-weight: bold;
-  color: #e67e22;
-  margin: 70px auto 30px;
-  font-weight: 300;
-  font-family: "Playwrite IT Moderna", serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: #e67e22;
+    margin: 70px auto 30px;
+    font-weight: 300;
+    font-family: "Playwrite IT Moderna", serif;
 }
 
 h2 {
-  font-size: 25px;
-  color: #555151;
-  margin-bottom: 15px;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
+    font-size: 25px;
+    color: #555151;
+    margin-bottom: 15px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px auto;
-  border: 1px solid #555151;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border: 1px solid #555151;
 }
 
-th, td {
-  padding: 15px;
-  border-bottom: 1px solid #555151;
-  border-right: 1px solid #555151;
-  text-align: center;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #555151;
+    border-right: 1px solid #555151;
+    text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
 }
 
 th {
-  background-color: #efa7b1;
-  color: white;
+    background-color: #efa7b1;
+    color: white;
 }
 
-/* 画像のスタイル */
 td img {
-  max-width: 60px;
-  height: auto;
-  border-radius: 5px;
+    max-width: 60px;
+    height: auto;
+    border-radius: 5px;
 }
 
-/* 入力フィールド */
-input[type="text"], input[type="number"] {
-  border: 1px solid #efa7b1;
-  border-radius: 5px;
-  padding: 10px;
-  width: 80%;
-  max-width: 250px;
-  font-size: 14px;
-  margin: 10px 0;
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #efa7b1;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+    max-width: 250px;
+    font-size: 14px;
+    margin: 10px 0;
 }
 
-/* ボタンのスタイル */
 button {
-  padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  border: none;
-  font-weight: 300;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-weight: 300;
 }
 
 button:hover {
-  background-color: #9f9e9e;
+    background-color: #9f9e9e;
 }
 
-/* 編集ボタン */
 .item__update {
-  display: block;
-  background-color: #f1c40f;
-  color: white;
+    display: block;
+    background-color: #f1c40f;
+    color: white;
 }
 
 .item__update:hover {
-  background-color: #f39c12;
+    background-color: #f39c12;
 }
 
-/* 削除ボタン */
 .item__delete {
-  background-color: #e74c3c;
-  color: white;
+    background-color: #e74c3c;
+    color: white;
 }
 
 .item__delete:hover {
-  background-color: #c0392b;
+    background-color: #c0392b;
 }
 
-/* 追加ボタン */
 .add__button {
-  background-color: #2ecc71;
-  color: white;
-  margin-top: 20px;
+    background-color: #2ecc71;
+    color: white;
+    margin-top: 20px;
 }
 
 .add__button:hover {
-  background-color: #27ae60;
+    background-color: #27ae60;
 }
 
-/* 注文管理セクション */
 .order-content {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #fdf2e9;
-  border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fdf2e9;
+    border-radius: 10px;
 }
 
 .pagination {
-  font-size: 20px;
-  margin: 40px auto 20px;
-  letter-spacing: 1px;
+    font-size: 20px;
+    margin: 40px auto 20px;
+    letter-spacing: 1px;
+    font-family: "Raleway", serif;
 }
 
 .pagination a {
-  color: #635252;
+    color: #635252;
 }
 
 .pagination a:hover {
-  cursor: pointer;
-  color: #b6b6b6;
+    cursor: pointer;
+    color: #b6b6b6;
 }
+
+.new-product-form {
+    background-color: #f4e4f2;
+    border: 1px solid #f8c1f0;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.new-product-form h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+}
+
+.new-product-form p {
+    margin: 0;
+    padding: 0;
+}
+
+.new-product-form input,
+.new-product-form textarea,
+.new-product-form button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+}
+
+.new-product-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.new-product-form input[type="file"] {
+    background-color: #fff;
+}
+
+.new-product-form button {
+    background-color: #efa7b1;
+    font-family: "Noto Sans JP", sans-serif;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.new-product-form button:hover {
+    background-color: #f39c12;
+}
+
+.form-error {
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .header__inner {
+      padding: 10px 20px;
+      flex-direction: column;
+    }
+  
+    .header__logo {
+      font-size: 28px;
+    }
+  
+    .nav__list {
+      gap: 10px;
+    }
+  
+    .nav__link {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    th,
+    td {
+      padding: 12px;
+    }
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .header__inner {
+      padding: 10px;
+      flex-direction: column;
+    }
+  
+    .header__logo {
+      font-size: 24px;
+    }
+  
+    .nav__list {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .nav__link {
+      padding: 8px 10px;
+      font-size: 10px;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    th,
+    td {
+      padding: 8px;
+      font-size: 10px;
+    }
+  
+    input[type="text"],
+    input[type="number"] {
+      width: 90%;
+      font-size: 12px;
+    }
+  }
+  

@@ -13,10 +13,5 @@ class Contact extends Model
         'name',
         'email',
         'content',
-        'status',
-    ];
-
-    protected $attributes = [
-        'status' => 'new',
     ];
 }

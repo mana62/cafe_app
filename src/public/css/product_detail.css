@@ -282,3 +282,85 @@ textarea {
     font-size: 14px;
     text-align: center;
 }
+
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .item-detail {
+      padding: 30px;
+    }
+  
+    .item-detail-title {
+      font-size: 32px;
+    }
+  
+    .item-detail__img {
+      width: 80%;
+    }
+  
+    .item-detail__price p {
+      font-size: 18px;
+    }
+  
+    .item-detail__cart {
+      gap: 15px;
+    }
+  
+    .contact__button-purchase a {
+      font-size: 14px;
+      padding: 8px 30px;
+    }
+  
+    .review-item {
+      padding: 15px;
+    }
+  
+    .review__stars label {
+      font-size: 28px;
+    }
+  
+    textarea {
+      width: 80%;
+    }
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .item-detail {
+      padding: 20px;
+    }
+  
+    .item-detail-title {
+      font-size: 24px;
+    }
+  
+    .item-detail__img {
+      width: 100%;
+    }
+  
+    .item-detail__price p {
+      font-size: 16px;
+    }
+  
+    .item-detail__cart {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .contact__button-purchase a {
+      font-size: 12px;
+      padding: 6px 20px;
+    }
+  
+    .review-item {
+      padding: 10px;
+    }
+  
+    .review__stars label {
+      font-size: 24px;
+    }
+  
+    textarea {
+      width: 100%;
+    }
+  }
+  

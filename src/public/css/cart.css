@@ -137,3 +137,84 @@ td input {
 .contact__button-purchase a:hover {
     background-color: #efa7b1;
 }
+
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .message {
+      margin: 80px auto 20px;
+    }
+  
+    .message-session {
+      font-size: 18px;
+    }
+  
+    .cart__table th,
+    .cart__table td {
+      padding: 20px;
+      font-size: 14px;
+    }
+  
+    td input {
+      width: 60px;
+      padding: 8px;
+    }
+  
+    .item__update,
+    .item__delete {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  
+    .content__button-submit {
+      padding: 12px 40px;
+      font-size: 14px;
+    }
+  
+    .contact__button-purchase a {
+      padding: 8px 40px;
+      font-size: 14px;
+    }
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .message {
+      margin: 60px auto 10px;
+    }
+  
+    .message-session {
+      font-size: 16px;
+    }
+  
+    .cart__table {
+      font-size: 12px;
+    }
+  
+    .cart__table th,
+    .cart__table td {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    td input {
+      width: 50px;
+      padding: 6px;
+    }
+  
+    .item__update,
+    .item__delete {
+      padding: 6px 12px;
+      font-size: 10px;
+    }
+  
+    .content__button-submit {
+      padding: 10px 30px;
+      font-size: 12px;
+    }
+  
+    .contact__button-purchase a {
+      padding: 8px 30px;
+      font-size: 12px;
+    }
+  }
+  

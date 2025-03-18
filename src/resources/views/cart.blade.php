@@ -33,7 +33,7 @@
                     {{-- Noを表示 --}}
                     <td>{{ $loop->iteration }}</td>
                     {{-- 該当商品のimgを表示 --}}
-                    <td><img src="{{ asset('img/' . $cart->product->image_path) }}" alt="" class="td__img"></td>
+                    <td><img src="{{ asset('storage/' . $cart->product->image_path) }}" alt="" class="td__img"></td>
                     {{-- 該当商品名を表示 --}}
                     <td>{{ $cart->product->name }}</td>
                     <td>

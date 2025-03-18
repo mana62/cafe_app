@@ -17,7 +17,7 @@ class OrderFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'status' => $this->faker->randomElement(['pending', 'confirmed', 'shipped', 'delivered']),
+            'status' => $this->faker->randomElement(['pending', 'confirmed', 'shipped']),
         ];
     }
 }

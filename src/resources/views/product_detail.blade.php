@@ -27,7 +27,7 @@
             <div class="item-detail__card">
                 <!-- 左側（商品画像） -->
                 <figure class="item-detail__img">
-                    <img src="{{ asset('img/' . $product->image_path) }}" alt="{{ $product->name }}">
+                    <img src="{{ asset('storage/' . $product->image_path) }}" alt="{{ $product->name }}">
                 </figure>
 
                 <!-- 右側（商品情報 + レビュー） -->

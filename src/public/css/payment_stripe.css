@@ -81,5 +81,80 @@
     margin-right: 10px;
 }
 
-@media (max-width: 768px) {
-}
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .title {
+      font-size: 28px;
+      margin: 120px auto 20px;
+    }
+  
+    #paymentMessage,
+    .payment-error {
+      font-size: 20px;
+    }
+  
+    .payment-input {
+      font-size: 18px;
+      padding: 12px;
+      width: 80%;
+      max-width: 400px;
+    }
+  
+    .card-element-form {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .payment__button-submit {
+      padding: 10px 40px;
+      font-size: 14px;
+    }
+  
+    .items {
+      width: 300px;
+    }
+  
+    .items p {
+      font-size: 16px;
+    }
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 24px;
+      margin: 80px auto 20px;
+    }
+  
+    #paymentMessage,
+    .payment-error {
+      font-size: 16px;
+    }
+  
+    .payment-input {
+      font-size: 16px;
+      padding: 10px;
+      width: 90%;
+    }
+  
+    .card-element-form {
+      padding: 15px;
+      width: 95%;
+    }
+  
+    .payment__button-submit {
+      padding: 8px 30px;
+      font-size: 12px;
+    }
+  
+    .items {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .items p {
+      font-size: 14px;
+    }
+  }
+  

@@ -128,6 +128,7 @@
     font-size: 24px;
     margin: 40px auto 20px;
     letter-spacing: 1px;
+    font-family: "Raleway", serif;
 }
 
 .pagination a {
@@ -139,19 +140,80 @@
     color: #b6b6b6;
 }
 
-@media screen and (max-width: 768px) {
-    .product-list__header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .product-list-search {
-        position: static;
-        width: 100%;
-    }
-
-    .product-list-search input {
-        width: 100%;
-    }
+.error {
+    margin: 20px auto;
 }
-/*# sourceMappingURL=product.css.map */
+
+.error-message {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #f03d3d;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .product-list {
+      padding: 80px 20px;
+    }
+  
+    .product-list__title {
+      font-size: 36px;
+    }
+  
+    .product-list-search input {
+      width: 80%;
+    }
+  
+    .product-card__image {
+      height: 200px;
+    }
+  
+    .product-card__name {
+      font-size: 18px;
+    }
+  
+    .product-card__price {
+      font-size: 16px;
+    }
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .product-list {
+      padding: 60px 10px;
+    }
+  
+    .product-list__title {
+      font-size: 28px;
+    }
+  
+    .product-list-search {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .product-list-search input {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .product-card__image {
+      height: 150px;
+    }
+  
+    .product-card__name {
+      font-size: 16px;
+    }
+  
+    .product-card__price {
+      font-size: 14px;
+    }
+  
+    .detail-link {
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+  }
+  
