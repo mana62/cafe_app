@@ -17,7 +17,6 @@ class ContactFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->safeEmail(),
             'content' => $this->faker->text(100),
-            'status' => $this->faker->randomElement(['new', 'in_progress', 'resolved']),
         ];
     }
 }

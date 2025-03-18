@@ -19,7 +19,6 @@ class CreateAddressesTable extends Migration
             $table->string('postal_code', 10);
             $table->string('address', 200);
             $table->string('building', 200)->nullable();
-            $table->string('phone_number', 20)->nullable();
             $table->timestamps();
         });
     }

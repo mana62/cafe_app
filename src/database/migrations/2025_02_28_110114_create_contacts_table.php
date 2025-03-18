@@ -18,7 +18,6 @@ class CreateContactsTable extends Migration
             $table->string('name', 100);
             $table->string('email');
             $table->text('content');
-            $table->enum('status', ['new', 'in_progress', 'resolved'])->default('new');
             $table->timestamps();
         });
     }

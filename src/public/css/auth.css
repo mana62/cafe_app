@@ -298,3 +298,76 @@ input[type="checkbox"] {
 .admin-link a:hover {
     color: #8e9aaf;
 }
+
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+      height: auto;
+    }
+    
+    .whitebox,
+    .pinkbox {
+      width: 100%;
+      height: auto;
+      top: 0;
+      position: relative;
+    }
+    
+    .signup__ttl,
+    .signin__ttl {
+      font-size: 2em;
+      margin-top: 50px;
+    }
+    
+    .title {
+      font-size: 2.5em;
+    }
+    
+    .text {
+      font-size: 1em;
+    }
+    
+    input {
+      width: 80%;
+    }
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+      height: auto;
+    }
+    
+    .whitebox,
+    .pinkbox {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    
+    .signup__ttl,
+    .signin__ttl {
+      font-size: 1.8em;
+    }
+    
+    .title {
+      font-size: 2em;
+    }
+    
+    .text {
+      font-size: 0.9em;
+    }
+    
+    input {
+      width: 90%;
+      font-size: 14px;
+    }
+    
+    button {
+      font-size: 10px;
+      padding: 10px;
+    }
+  }
+  

@@ -15,9 +15,11 @@
         </div>
 
         <!-- エラーメッセージ -->
-        @if (session('error'))
-            <p class="error-message">{{ session('error') }}</p>
-        @endif
+        <div class="error">
+            @if (session('error'))
+                <p class="error-message">{{ session('error') }}</p>
+            @endif
+        </div>
 
         <div class="product-list__grid">
             @if ($products->isEmpty())
@@ -25,7 +27,7 @@
             @else
                 @foreach ($products as $product)
                     <div class="product-card">
-                        <img class="product-card__image" src="{{ asset('img/' . $product->image_path) }}" alt="">
+                        <img class="product-card__image" src="{{ asset('storage/' . $product->image_path) }}" alt="{{ $product->name }}">
                         <h2 class="product-card__name">{{ $product->name }}</h2>
                         <p class="product-card__price">¥{{ number_format($product->price) }}</p>
                         <p class="product-card__description">{{ $product->description }}</p>

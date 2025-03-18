@@ -18,6 +18,7 @@ class ProductController extends Controller
     public function show()
     {
         $products = Product::paginate(10);
+
         return view('product', compact('products'));
     }
 
@@ -56,7 +57,7 @@ class ProductController extends Controller
 
         // Product テーブルから、name に keyword が含まれる商品を取得
         // LIKE '%keyword%' は 部分一致検索
-        $products = Product::where('name', 'LIKE', "%{$keyword}%")->get();
+        $products = Product::where('name', 'LIKE', "%{$keyword}%")->paginate(10);
 
         return view('product', ['keyword' => $keyword, 'products' => $products]);
     }

@@ -93,7 +93,7 @@
                             @foreach ($orders as $order)
                                 @foreach ($order->products as $product)
                                     <li class="order-li">
-                                        <img src="{{ asset('img/' . $product->image_path) }}" alt="">
+                                        <img src="{{ asset('storage/' . $product->image_path) }}" alt="">
                                         <div class="items">
                                             <p><span class="order-label">注文ID</span><span>{{ $order->id }}</span></p>
                                             <p><span class="order-label">商品</span><span>{{ $product->name }}</span></p>
@@ -118,12 +118,11 @@
                         <ul class="item-list favorite-ul">
                             @foreach ($favorites as $favorite)
                                 <li class="favorite-li">
-                                    <img src="{{ asset('img/' . $favorite->product->image_path) }}"
-                                        alt="{{ $favorite->product->name }}">
-                                    <div class="items">
-                                        <p>{{ $favorite->product->name }}</p>
-                                        <a href="{{ route('product.detail', $favorite->product->id) }}">詳細を見る</a>
-                                    </div>
+                                    <img src="{{ asset('storage/' . $favorite->product->image_path) }}" alt="">
+                                        <div class="items">
+                                            <p>{{ $favorite->product->name }}</p>
+                                            <a href="{{ route('product.detail', $favorite->product->id) }}">詳細を見る</a>
+                                        </div>
                                 </li>
                             @endforeach
                         </ul>
@@ -141,9 +140,10 @@
                         <ul class="item-list review-ul">
                             @foreach ($reviews as $review)
                                 <li class="review-li">
-                                    <img src="{{ asset('img/' . $review->product->image_path) }}" alt="">
+                                    <img src="{{ asset('storage/' . $review->product->image_path) }}" alt="">
                                     <div class="items">
-                                        <p><span class="review-label">商品</span> <span>{{ $review->product->name }}</span>
+                                        <p>
+                                            <span class="review-label">商品</span> <span>{{ $review->product->name }}</span>
                                         </p>
                                         <p><span class="review-label">評価</span> <span>{{ $review->rating }}</span></p>
                                         <p><span class="review-label">コメント</span> <span>{{ $review->comment }}</span></p>

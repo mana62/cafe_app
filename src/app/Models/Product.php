@@ -26,11 +26,6 @@ class Product extends Model
         return $this->hasMany(Favorite::class, 'product_id');
     }
 
-    public function productImages()
-    {
-        return $this->hasMany(ProductImage::class);
-    }
-
     public function orders()
     {
         return $this->belongsToMany(Order::class, 'order_product')

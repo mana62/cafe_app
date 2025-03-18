@@ -67,18 +67,46 @@ strong {
     color: #efa7b1;
 }
 
-@media (max-width: 768px) {
-    .left,
-    .right {
-        float: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
+/* タブレット対応 (幅768px以下) */
+@media screen and (max-width: 768px) {
+    .section h1,
+    .section h2 {
+      font-size: 28px;
     }
+  
+    .history__image,
+    .news__image,
+    .location__image {
+      max-width: 300px;
+    }
+  
     .history__text,
     .news__text,
     .location__text {
-        text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
     }
-}
+  }
+  
+  /* スマートフォン対応 (幅480px以下) */
+  @media screen and (max-width: 480px) {
+    .section h1,
+    .section h2 {
+      font-size: 24px;
+    }
+  
+    .history__image,
+    .news__image,
+    .location__image {
+      max-width: 250px;
+    }
+  
+    .history__text,
+    .news__text,
+    .location__text {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+  
 /*# sourceMappingURL=home.css.map */
