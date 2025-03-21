@@ -81,80 +81,77 @@
     margin-right: 10px;
 }
 
-/* タブレット対応 (幅768px以下) */
 @media screen and (max-width: 768px) {
     .title {
-      font-size: 28px;
-      margin: 120px auto 20px;
+        font-size: 28px;
+        margin: 120px auto 20px;
     }
-  
+
     #paymentMessage,
     .payment-error {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .payment-input {
-      font-size: 18px;
-      padding: 12px;
-      width: 80%;
-      max-width: 400px;
+        font-size: 18px;
+        padding: 12px;
+        width: 80%;
+        max-width: 400px;
     }
-  
+
     .card-element-form {
-      padding: 20px;
-      width: 90%;
+        padding: 20px;
+        width: 90%;
     }
-  
+
     .payment__button-submit {
-      padding: 10px 40px;
-      font-size: 14px;
+        padding: 10px 40px;
+        font-size: 14px;
     }
-  
+
     .items {
-      width: 300px;
+        width: 300px;
     }
-  
+
     .items p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
-  
-  /* スマートフォン対応 (幅480px以下) */
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     .title {
-      font-size: 24px;
-      margin: 80px auto 20px;
+        font-size: 24px;
+        margin: 80px auto 20px;
     }
-  
+
     #paymentMessage,
     .payment-error {
-      font-size: 16px;
+        font-size: 16px;
     }
-  
+
     .payment-input {
-      font-size: 16px;
-      padding: 10px;
-      width: 90%;
+        font-size: 16px;
+        padding: 10px;
+        width: 90%;
     }
-  
+
     .card-element-form {
-      padding: 15px;
-      width: 95%;
+        padding: 15px;
+        width: 95%;
     }
-  
+
     .payment__button-submit {
-      padding: 8px 30px;
-      font-size: 12px;
+        padding: 8px 30px;
+        font-size: 12px;
     }
-  
+
     .items {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
     }
-  
+
     .items p {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
-  
+}
