@@ -45,35 +45,32 @@
     background-color: #e77c8b;
 }
 
-/* タブレット対応 (幅768px以下) */
 @media screen and (max-width: 768px) {
     .verify-email__ttl {
-      font-size: 28px;
+        font-size: 28px;
     }
-  
+
     .verify-email__text {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .verify-email__button-submit {
-      padding: 10px 40px;
-      font-size: 14px;
+        padding: 10px 40px;
+        font-size: 14px;
     }
-  }
-  
-  /* スマートフォン対応 (幅480px以下) */
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     .verify-email__ttl {
-      font-size: 24px;
+        font-size: 24px;
     }
-  
+
     .verify-email__text {
-      font-size: 16px;
+        font-size: 16px;
     }
-  
+
     .verify-email__button-submit {
-      padding: 8px 30px;
-      font-size: 12px;
+        padding: 8px 30px;
+        font-size: 12px;
     }
-  }
-  
+}

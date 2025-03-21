@@ -283,84 +283,98 @@ textarea {
     text-align: center;
 }
 
-/* タブレット対応 (幅768px以下) */
 @media screen and (max-width: 768px) {
     .item-detail {
-      padding: 30px;
+        padding: 30px;
     }
-  
+
     .item-detail-title {
-      font-size: 32px;
+        font-size: 32px;
     }
-  
+
     .item-detail__img {
-      width: 80%;
+        width: 80%;
     }
-  
+
     .item-detail__price p {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .item-detail__cart {
-      gap: 15px;
+        gap: 15px;
     }
-  
+
     .contact__button-purchase a {
-      font-size: 14px;
-      padding: 8px 30px;
+        font-size: 14px;
+        padding: 8px 30px;
     }
-  
+
     .review-item {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .review__stars label {
-      font-size: 28px;
+        font-size: 28px;
     }
-  
+
     textarea {
-      width: 80%;
+        width: 80%;
     }
-  }
-  
-  /* スマートフォン対応 (幅480px以下) */
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     .item-detail {
-      padding: 20px;
+        padding: 5px;
+        margin-top: 70px;
     }
-  
+
     .item-detail-title {
-      font-size: 24px;
+        font-size: 28px;
     }
-  
+
+    .item-detail-title::before,
+    .item-detail-title::after {
+        content: "";
+        display: inline-block;
+        width: 70px;
+        height: 2px;
+        background-color: #e67e22;
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+
     .item-detail__img {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .item-detail__price p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
     .item-detail__cart {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: column;
+        gap: 10px;
     }
-  
+
     .contact__button-purchase a {
-      font-size: 12px;
-      padding: 6px 20px;
+        font-size: 12px;
+        padding: 6px 20px;
     }
-  
+
     .review-item {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .review__stars label {
-      font-size: 24px;
+        font-size: 24px;
     }
-  
+
     textarea {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}

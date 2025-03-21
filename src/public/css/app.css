@@ -1,132 +1,159 @@
 a {
-  text-decoration: none;
-  color: #8e9aaf;
-  cursor: pointer;
+    text-decoration: none;
+    color: #8e9aaf;
+    cursor: pointer;
 }
 
 .header {
-  background-color: #f9f2ff;
-  position: fixed;
-  width: 100%;
-  grid-row: 1;
+    background-color: #f9f2ff;
+    position: fixed;
+    width: 100%;
+    grid-row: 1;
 }
 
 .header__inner {
-  padding: 10px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
-  font-family: "Playwrite IT Moderna", serif;
-  font-size: 35px;
-  color: #8e9aaf;
-  text-align: center;
-  font-weight: 300;
+    font-family: "Playwrite IT Moderna", serif;
+    font-size: 35px;
+    color: #8e9aaf;
+    text-align: center;
+    font-weight: 300;
 }
 
 .header__logo span {
-  color: #eac7cc;
+    color: #eac7cc;
 }
 
 .nav__item {
-  list-style: none;
-  margin: 0 30px;
+    list-style: none;
+    margin: 0 30px;
 }
 
 .nav__list {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-family: "Raleway", serif;
-  font-weight: 300;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: "Raleway", serif;
+    font-weight: 300;
 }
 
 .nav__link-logout {
-  font-size: 20px;
-  font-family: "Raleway", serif;
-  font-weight: 300;
-  border: none;
-  background-color: #f9f2ff;
-  color: #8e9aaf;
-  cursor: pointer;
-  padding: 0;
+    font-size: 20px;
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    border: none;
+    background-color: #f9f2ff;
+    color: #8e9aaf;
+    cursor: pointer;
+    padding: 0;
 }
 
 .nav__link-logout:hover {
-  background-color: #f9f2ff;
+    background-color: #f9f2ff;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main {
-  background-color: #fffdfb;
-  padding: 50px 20px;
-  flex-grow: 2;
+    background-color: #fffdfb;
+    padding: 50px 20px;
+    flex-grow: 2;
 }
 
 .footer {
-  background-color: #f9f2ff;
-  grid-row: 3;
+    background-color: #f9f2ff;
+    grid-row: 3;
 }
 
 .footer__inner {
-  padding: 10px 0;
-  text-align: center;
-  margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .footer__copy {
-  font-family: "Raleway", serif;
-  font-size: 18px;
-  color: #8e9aaf;
-  font-weight: 300;
-  letter-spacing: 2px;
-}
-/*# sourceMappingURL=app.css.map */
-
-/* タブレット対応 (幅768px以下) */
-@media screen and (max-width: 768px) {
-  .header__inner {
-    padding: 10px 30px;
-  }
-  
-  .header__logo {
-    font-size: 28px;
-  }
-
-  .nav__list {
+    font-family: "Raleway", serif;
     font-size: 18px;
-  }
+    color: #8e9aaf;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
-/* スマートフォン対応 (幅480px以下) */
+@media screen and (max-width: 1180px) {
+    .header__inner {
+        padding: 10px 20px;
+    }
+
+    .header__logo {
+        font-size: 27px;
+    }
+
+    .nav__list,
+    .nav__link-logout {
+        font-size: 16px;
+    }
+
+    .nav__item {
+        margin: 10px 23px;
+        font-size: 17px;
+    }
+
+    .footer__copy {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__inner {
+        padding: 10px 30px;
+    }
+
+    .header__logo {
+        font-size: 25px;
+    }
+
+    .nav__item,
+    .nav__link-logout {
+        font-size: 15px;
+    }
+
+    .footer__copy {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 480px) {
-  .header__inner {
-    flex-direction: column; /* ナビゲーションを縦並びに */
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .header__logo {
-    font-size: 24px;
-  }
-  
-  .nav__list {
-    flex-direction: column;
-    font-size: 16px;
-  }
-  
-  .nav__item {
-    margin: 10px 0;
-  }
-  
-  .footer__copy {
-    font-size: 14px;
-  }
+    .header__inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header__logo {
+        font-size: 24px;
+    }
+
+    .nav__list {
+        margin: 0 10px;
+    }
+
+    .nav__item,
+    .nav__link-logout {
+        margin: 7px;
+        font-size: 12px;
+    }
+
+    .footer__copy {
+        font-size: 14px;
+    }
 }

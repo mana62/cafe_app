@@ -1,74 +1,71 @@
 .main {
-  background-color: #ffffff;
-  padding: 0;
+    background-color: #ffffff;
+    padding: 0;
 }
 
 .content {
-  padding-top: 65px;
-  margin: 0 auto;
-  text-align: center;
+    padding-top: 65px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .content__title {
-  font-size: 35px;
-  font-weight: 300;
-  margin: 180px 0 15px;
-  color: #555151;
-  font-family: "Noto Sans JP", sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 180px 0 15px;
+    color: #555151;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 .content__description {
-  font-size: 20px;
-  color: #8e9aaf;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 300;
-  margin: 80px 0;
-  line-height: 1.6;
+    font-size: 20px;
+    color: #8e9aaf;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    margin: 80px 0;
+    line-height: 1.6;
 }
 
 .content__img {
-  display: flex;
-  width: 300px;
-  height: auto;
-  margin: 0 auto;
+    display: flex;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .content__img img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
-/*# sourceMappingURL=contact.thanks.css.map */
 
-/* タブレット対応 (幅768px以下) */
 @media screen and (max-width: 768px) {
-  .content__title {
-    font-size: 28px;
-    margin: 120px 0 10px;
-  }
+    .content__title {
+        font-size: 28px;
+        margin: 120px 0 10px;
+    }
 
-  .content__description {
-    font-size: 18px;
-    margin: 60px 0;
-  }
+    .content__description {
+        font-size: 18px;
+        margin: 60px 0;
+    }
 
-  .content__img {
-    width: 250px;
-  }
+    .content__img {
+        width: 250px;
+    }
 }
 
-/* スマートフォン対応 (幅480px以下) */
 @media screen and (max-width: 480px) {
-  .content__title {
-    font-size: 24px;
-    margin: 80px 0 10px;
-  }
+    .content__title {
+        font-size: 24px;
+        margin: 80px 0 10px;
+    }
 
-  .content__description {
-    font-size: 16px;
-    margin: 40px 0;
-  }
+    .content__description {
+        font-size: 16px;
+        margin: 40px 0;
+    }
 
-  .content__img {
-    width: 200px;
-  }
+    .content__img {
+        width: 200px;
+    }
 }

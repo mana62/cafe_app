@@ -104,6 +104,7 @@
                 <p class="text">Savourons <span>chaque instant</span></p>
                 <img class="cake1 img" src="{{ asset('img/pan-cake.jpeg') }}" alt="1357d638624297b" border="0">
                 <p class="account">have an account?</p>
+                <p class="link"><a href="{{ route('product') }}">show all menu</a></p>
                 <button class="button" id="signin">LOGIN</button>
             </div>
             <div class="rightbox">
@@ -111,6 +112,7 @@
                 <p class="text"> Savourons <span>chaque instant</span></p>
                 <img class="cake2 img" src="{{ asset('img/cup-cake.jpeg') }}" alt="1357d638624297b" border="0">
                 <p class="account">don't have an account?</p>
+                <p class="link"><a href="{{ route('product') }}">show all menu</a></p>
                 <button class="button" id="signup">SIGN UP</button>
             </div>
         </div>

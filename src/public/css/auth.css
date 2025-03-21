@@ -2,7 +2,6 @@ body {
     background: #cbc0d3;
 }
 
-/* div box styling */
 .container {
     margin: 0 auto;
     width: 900px;
@@ -20,7 +19,7 @@ body {
 
 .pinkbox {
     position: absolute;
-    top: -13%;
+    top: -10%;
     left: 0.3%;
     background: #eac7cc;
     width: 500px;
@@ -117,11 +116,26 @@ body {
 }
 
 .account {
-    margin-top: 58%;
+    margin-top: 70%;
     font-size: 16px;
     font-family: "Raleway", serif;
     color: #8e9aaf;
     text-align: center;
+}
+
+.link {
+    text-align: center;
+}
+
+.link a {
+    font-size: 18px;
+    font-family: "Raleway", serif;
+    color: #8e9aaf;
+}
+
+.link a:hover {
+    color: #ed9aa6;
+    cursor: pointer;
 }
 
 button {
@@ -151,7 +165,6 @@ button:hover {
     font-family: "Open Sans", sans-serif;
 }
 
-/* form styling */
 form {
     display: flex;
     align-items: center;
@@ -282,7 +295,7 @@ input[type="checkbox"] {
 }
 
 .admin-link {
-    margin:  10px auto;
+    margin: 10px auto;
 }
 
 .admin-link a {
@@ -299,75 +312,130 @@ input[type="checkbox"] {
     color: #8e9aaf;
 }
 
-/* タブレット対応 (幅768px以下) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .container {
-      width: 100%;
-      height: auto;
+        width: 90%;
+        margin-top: 5%;
     }
-    
-    .whitebox,
+    .whitebox {
+        width: 100%;
+    }
     .pinkbox {
-      width: 100%;
-      height: auto;
-      top: 0;
-      position: relative;
+        width: 55%;
+        height: 700px;
     }
-    
     .signup__ttl,
     .signin__ttl {
-      font-size: 2em;
-      margin-top: 50px;
+        font-size: 2.5em;
     }
-    
+
     .title {
-      font-size: 2.5em;
+        font-size: 2em;
     }
-    
-    .text {
-      font-size: 1em;
-    }
-    
+
     input {
-      width: 80%;
+        width: 80%;
     }
-  }
-  
-  /* スマートフォン対応 (幅480px以下) */
-  @media screen and (max-width: 480px) {
-    .container {
-      width: 100%;
-      height: auto;
-    }
-    
-    .whitebox,
-    .pinkbox {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    
-    .signup__ttl,
-    .signin__ttl {
-      font-size: 1.8em;
-    }
-    
-    .title {
-      font-size: 2em;
-    }
-    
-    .text {
-      font-size: 0.9em;
-    }
-    
-    input {
-      width: 90%;
-      font-size: 14px;
-    }
-    
     button {
-      font-size: 10px;
-      padding: 10px;
+        font-size: 12px;
     }
-  }
-  
+    .register {
+        right: 10%;
+        top: 44%;
+    }
+
+    .confirm_register {
+        right: 10%;
+        top: 52%;
+    }
+
+    .login {
+        right: 10%;
+        top: 36%;
+    }
+
+    .cake1 {
+        position: absolute;
+        max-width: 55%;
+        top: 28%;
+        left: 25%;
+        border-radius: 10px;
+    }
+
+    .cake2 {
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        width: 41%;
+        max-width: 150px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .leftbox,
+    .rightbox {
+        width: 50%;
+    }
+
+    .pinkbox {
+        height: 500px;
+        left: 0;
+        border-radius: 5px;
+    }
+    .signup__ttl,
+    .signin__ttl {
+        font-size: 1.6em;
+        margin-top: 50px;
+    }
+    input {
+        width: 90%;
+        font-size: 14px;
+    }
+    button,
+    .signup__form .submit,
+    .signin__form .submit {
+        font-size: 12px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 1.3em;
+    }
+
+    .text {
+        font-size: 1em;
+    }
+
+    .cake1 {
+        max-width: 52%;
+        top: 30%;
+    }
+
+    .register {
+        right: 0%;
+        top: 48%;
+    }
+
+    .confirm_register {
+        right: 0%;
+        top: 60%;
+    }
+
+    .login {
+        right: 0%;
+        top: 38%;
+    }
+}
+
+input::placeholder {
+    font-size: 1em;
+}
+input:focus {
+    font-size: 1em;
+}
