@@ -12,12 +12,10 @@ class ReviewController extends Controller
     //レビューを保存
     public function store(ReviewRequest $request, $id)
     {
-        // ログイン済みかチェックし、ログインしていなければログインページに移動
         if (!Auth::check()) {
             return redirect()->route('login');
         }
 
-        // Reviewデータベースに保存
         Review::create([
             'product_id' => $id,
             'user_id' => auth()->id(),

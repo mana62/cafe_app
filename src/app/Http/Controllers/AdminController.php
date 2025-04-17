@@ -38,7 +38,7 @@ class AdminController extends Controller
         $users = User::paginate(10);
         $products = Product::paginate(10);
         $orders = Order::with('user', 'products')->paginate(10);
-    
+
         return view('admin.dashboard', compact('users', 'products', 'orders'));
     }
 }

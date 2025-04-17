@@ -8,7 +8,7 @@
 <開発環境>
 
 phpmyadmin: http://localhost:8080 <br>
-アプリURL: [http://localhost/register]
+アプリURL: http://localhost/register <br>
 
 
 # 他のリポジトリ
@@ -57,7 +57,7 @@ https://github.com/mana62/cafe_app
 
 # テーブル設計
 
-[Book.pdf](https://github.com/user-attachments/files/19304397/Book.pdf)
+<img width="351" alt="Image" src="https://github.com/user-attachments/assets/446f635f-ebe0-45ea-8ce7-8c8592c8aace" />
 
 # ER図
 
