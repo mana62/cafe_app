@@ -2,7 +2,7 @@
 
 // DOMContentLoaded イベントは、HTMLの読み込みが完了した時 に実行される
 document.addEventListener("DOMContentLoaded", function () {
-    // // 初期表示は「ユーザー情報」
+    // 初期表示は「ユーザー情報」
     showTab("profile");
 
     // .tab-btn クラスを持つすべてのボタンにクリックイベントを設定
@@ -43,7 +43,6 @@ function showTab(tabId) {
 }
 
 // section に応じた id の要素を取得
-// （例： profile の場合、profile-display と profile-edit）
 function toggleEdit(section) {
     const displayDiv = document.getElementById(section + "-display");
     const editDiv = document.getElementById(section + "-edit");
