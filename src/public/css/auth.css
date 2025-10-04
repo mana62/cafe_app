@@ -206,7 +206,7 @@ form {
 input {
     background: #eac7cc;
     width: 65%;
-    color: #f6f6f6;
+    color: #494646;
     border: none;
     border-bottom: 1px solid rgba(246, 246, 246, 0.5);
     padding: 9px;
@@ -214,13 +214,13 @@ input {
 }
 
 input::placeholder {
-    color: #f6f6f6;
+    color: #5c5b5b;
     letter-spacing: 2px;
     font-size: 1.3em;
-    font-weight: 100;
+    font-weight: 200;
 }
 input:focus {
-    color: #f6f6f6;
+    color: #494646;
     outline: none;
     border-bottom: 1.2px solid rgba(darken(#eac7cc, 20%), 0.7);
     font-size: 1em;
